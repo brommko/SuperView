@@ -1,0 +1,11 @@
+framework module SuperView {
+  umbrella header "SuperView.h"
+
+  export *
+  module * { export * }
+}
+
+module SuperView.Swift {
+    header "SuperView-Swift.h"
+    requires objc
+}

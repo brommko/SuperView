@@ -1,0 +1,10 @@
+language: swift
+osx_image: xcode10
+before_install:
+  - gem install cocoapods # Since Travis is not always on latest version
+  - pod repo update
+  - pod install
+script:
+  - xcodebuild -scheme Example -workspace Example.xcworkspace -sdk iphonesimulator build
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

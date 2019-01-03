@@ -1,0 +1,16 @@
+name: Example
+targets:
+  Example:
+    type: application
+    platform: iOS
+    deploymentTarget: 10.0
+    sources:
+      - path: Sources
+    postBuildScripts:
+      - script: bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/SuperView.framework/strip-frameworks.sh"
+        name: Trimming
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.bommko.Example
+      FRAMEWORK_SEARCH_PATHS: $PROJECT_DIR/Frameworks
+      SWIFT_VERSION: 4.2
+      ENABLE_BITCODE: NO
