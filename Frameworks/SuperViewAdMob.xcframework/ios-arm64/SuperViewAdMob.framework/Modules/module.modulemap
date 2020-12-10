@@ -1,0 +1,11 @@
+framework module SuperViewAdMob {
+  umbrella header "SuperViewAdMob.h"
+
+  export *
+  module * { export * }
+}
+
+module SuperViewAdMob.Swift {
+    header "SuperViewAdMob-Swift.h"
+    requires objc
+}

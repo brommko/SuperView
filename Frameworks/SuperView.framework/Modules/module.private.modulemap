@@ -1,4 +1,0 @@
-framework module SuperView_Private {
-    header "OneSignal/OneSignal.h"
-    export *
-}

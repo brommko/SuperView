@@ -1,0 +1,64 @@
+[
+  {
+    "shortDescription" : "",
+    "metadataOutputVersion" : "3.0",
+    "outputSchema" : [
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Double",
+        "formattedType" : "MultiArray (Double 3 × 34 × 51)",
+        "shortDescription" : "",
+        "shape" : "[3, 34, 51]",
+        "name" : "output1",
+        "type" : "MultiArray"
+      }
+    ],
+    "version" : "",
+    "modelParameters" : [
+
+    ],
+    "author" : "",
+    "specificationVersion" : 1,
+    "license" : "",
+    "isUpdatable" : "0",
+    "availability" : {
+      "macOS" : "10.13",
+      "tvOS" : "11.0",
+      "watchOS" : "4.0",
+      "iOS" : "11.0",
+      "macCatalyst" : "11.0"
+    },
+    "modelType" : {
+      "name" : "MLModelType_neuralNetwork"
+    },
+    "inputSchema" : [
+      {
+        "height" : "302",
+        "colorspace" : "RGB",
+        "isOptional" : "0",
+        "width" : "480",
+        "isColor" : "1",
+        "formattedType" : "Image (Color 480 × 302)",
+        "hasSizeFlexibility" : "0",
+        "type" : "Image",
+        "shortDescription" : "",
+        "name" : "input1"
+      }
+    ],
+    "userDefinedMetadata" : {
+
+    },
+    "generatedClassName" : "FindFour",
+    "neuralNetworkLayerTypeHistogram" : {
+      "ActivationLinear" : 42,
+      "ActivationReLU" : 21,
+      "Softmax" : 1,
+      "UnaryThreshold" : 21,
+      "BatchNorm" : 21,
+      "Convolution" : 26,
+      "PaddingConstant" : 3
+    },
+    "method" : "predict"
+  }
+]

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cuv-2O-NKL">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -11,33 +11,33 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="EHf-IW-A2E">
+        <scene sceneID="nq2-0E-3q3">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <viewController id="Cuv-2O-NKL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i1u-tr-sU5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="Ndy-YA-tDK">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="dJb-7u-tG8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.33337754011154175" green="0.33706146478652954" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Ndy-YA-tDK" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="QFI-Lr-vZC"/>
-                            <constraint firstAttribute="bottom" secondItem="Ndy-YA-tDK" secondAttribute="bottom" id="X7F-46-A98"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ndy-YA-tDK" secondAttribute="trailing" id="b2U-tx-hZy"/>
-                            <constraint firstItem="Ndy-YA-tDK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="f92-N8-JBs"/>
+                            <constraint firstItem="dJb-7u-tG8" firstAttribute="top" secondItem="i1u-tr-sU5" secondAttribute="top" id="C0H-fd-eQ4"/>
+                            <constraint firstAttribute="bottom" secondItem="dJb-7u-tG8" secondAttribute="bottom" id="HpC-Wc-6Ht"/>
+                            <constraint firstItem="dJb-7u-tG8" firstAttribute="leading" secondItem="ZcD-rW-30z" secondAttribute="leading" id="Rpv-wu-E7b"/>
+                            <constraint firstItem="ZcD-rW-30z" firstAttribute="trailing" secondItem="dJb-7u-tG8" secondAttribute="trailing" id="iTh-G0-AyB"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="ZcD-rW-30z"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rmT-zI-8RK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50.724637681159422" y="374.33035714285711"/>
+            <point key="canvasLocation" x="52" y="374.6305418719212"/>
         </scene>
     </scenes>
     <resources>
-        <image name="splash" width="2048" height="2048"/>
+        <image name="splash" width="2436" height="2436"/>
     </resources>
 </document>
