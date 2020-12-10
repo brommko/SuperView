@@ -1,0 +1,11 @@
+framework module SuperViewFacebook {
+  umbrella header "SuperViewFacebook.h"
+
+  export *
+  module * { export * }
+}
+
+module SuperViewFacebook.Swift {
+    header "SuperViewFacebook-Swift.h"
+    requires objc
+}

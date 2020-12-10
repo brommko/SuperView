@@ -12,38 +12,6 @@ function alert() {
    kill -s TERM $TOP_PID
 }
 
-function commandExists {
-  #this should be a very portable way of checking if something is on the path
-  #usage: "if commandExists foo; then echo it exists; fi"
-  type "$1" &> /dev/null
-}
-
-function checkForXcode() {
-    if [ -d $(commandExists xcode-select) ]; then
-        echo "👍 - Xcode installed"
-    else
-        echo "🔥 - You need to install Xcode first: https://developer.apple.com/xcode/"
-        alert
-    fi
-}
-
-function checkForSwiftenv() {
-    if : $(commandExists swiftenv); then
-        echo "👍 - Swift Version Manager installed"
-    else
-        installSwiftenv
-    fi
-}
-
-function setSwiftVersion() {
-    if : $(swiftenv local 4.2); then
-        echo "👍 - Swift version set to 4.2"
-    else
-        echo "🔥 - Swift Version Manager can't set swift version to 4.2"
-        alert
-    fi
-}
-
 function generateAppIcon() {
     echo "✋ - Generating App Icons"
     generator=$DIR/scripts/ios-icon-generator.sh;
@@ -74,58 +42,12 @@ function generateSplash() {
     fi
 }
 
-
-function installSwiftenv() {
-    echo "🤞 - Swift Version Manager install in progress"
-
-    if : $(git clone https://github.com/kylef/swiftenv.git ~/.swiftenv); then
-      echo 'export SWIFTENV_ROOT="$HOME/.swiftenv"' >> ~/.bash_profile
-      echo 'export PATH="$SWIFTENV_ROOT/bin:$PATH"' >> ~/.bash_profile
-      echo 'eval "$(swiftenv init -)"' >> ~/.bash_profile
-      echo "👍 - Swift Version Manager installed"
-    else
-      echo "🔥 - Swift Version Manager installed failed"
-      alert
-    fi
-}
-
-function installSwiftVersion() {
-    if : $(swiftenv install 4.2); then
-      echo "👍 - Swift 4.2 installed"
-    else
-      echo "🔥 - Swift 4.2 install failed"
-      alert
-    fi
-}
-
-function installXcodeGen() {
-    if : $(git clone https://github.com/yonaskolb/XcodeGen.git); then
-      cd XcodeGen
-      make
-      cd ../
-      rm -rf XcodeGen/
-      echo "👍 - XcodeGen installed"
-      createProject
-    else
-      echo "🔥 - XcodeGen install failed"
-      alert
-    fi
-}
-
-function checkForXcodegen() {
-    if : $(commandExists xcodegen); then
-        echo "👍 - Xcodegen installed"
-    else
-        installXcodeGen
-    fi
-}
-
 function createProject() {
     echo "✋ - Generating project"
     cd "$DIR";
     createXcode=$(xcodegen)
 
-    if [[ $createXcode == *"Loaded project"* ]]; then
+    if [[ $createXcode == *"Created project"* ]]; then
       echo "👍 - Xcode project created"
     else
       echo "🔥 - Xcode project generating failed"
@@ -134,16 +56,7 @@ function createProject() {
 }
 
 function openProject() {
-    projectPath=$(find "$DIR" -maxdepth 1 -name "*.xcodeproj");
-
-    if [ -d "${projectPath}" ] ; then
-      echo "👏 - Project is there!"
-    else
-      echo "🔥 - Can't find Xcode project"
-      alert
-    fi
-
-    openXcode=$(open -a Xcode "$projectPath")
+    openXcode=$(xed .);
     if $openXcode; then
       echo "👏 - Let's open the project now"
       kill -9 $PPID
@@ -153,14 +66,27 @@ function openProject() {
     fi
 }
 
-rm -rf *.xcodeproj/
+function podInstall() {
+    installPods=$(pod install)
+    if [[ $installPods == *"Pod installation complete!"* ]]; then
+      echo "👏 - DONE"
+      #otvori xcode
+      $(xed .);
+      kill -9 $PPID
+    else
+      echo "🔥 - Can't install pods"
+      alert
+    fi
+}
 
-checkForXcode
-checkForSwiftenv
-installSwiftVersion
-setSwiftVersion
+cd "$DIR";
+$(rm -rf *.xcodeproj);
+$(rm -rf *.xcworkspace);
+$(rm -rf Pods);
+$(rm -rf Podfile.lock);
+
 generateAppIcon
 generateSplash
-checkForXcodegen
 createProject
+podInstall
 openProject

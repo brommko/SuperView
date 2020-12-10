@@ -3,14 +3,13 @@ targets:
   Example:
     type: application
     platform: iOS
-    deploymentTarget: 10.0
+    deploymentTarget: 12.0
     sources:
       - path: Sources
-    postBuildScripts:
-      - script: bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/SuperView.framework/strip-frameworks.sh"
-        name: Trimming
+      - path: www
+        type: folder
     settings:
-      PRODUCT_BUNDLE_IDENTIFIER: com.bommko.Example
-      FRAMEWORK_SEARCH_PATHS: $PROJECT_DIR/Frameworks
-      SWIFT_VERSION: 4.2
+      INFOPLIST_FILE: Sources/Info.plist
+      PRODUCT_BUNDLE_IDENTIFIER: com.brommko.UniversalWebView
       ENABLE_BITCODE: NO
+      CURRENT_PROJECT_VERSION: 1

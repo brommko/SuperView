@@ -1,0 +1,64 @@
+[
+  {
+    "shortDescription" : "",
+    "metadataOutputVersion" : "3.0",
+    "outputSchema" : [
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Double",
+        "formattedType" : "MultiArray (Double 11 × 1 × 17)",
+        "shortDescription" : "",
+        "shape" : "[11, 1, 17]",
+        "name" : "output1",
+        "type" : "MultiArray"
+      }
+    ],
+    "version" : "",
+    "modelParameters" : [
+
+    ],
+    "author" : "",
+    "specificationVersion" : 1,
+    "license" : "",
+    "isUpdatable" : "0",
+    "availability" : {
+      "macOS" : "10.13",
+      "tvOS" : "11.0",
+      "watchOS" : "4.0",
+      "iOS" : "11.0",
+      "macCatalyst" : "11.0"
+    },
+    "modelType" : {
+      "name" : "MLModelType_neuralNetwork"
+    },
+    "inputSchema" : [
+      {
+        "height" : "36",
+        "colorspace" : "RGB",
+        "isOptional" : "0",
+        "width" : "80",
+        "isColor" : "1",
+        "formattedType" : "Image (Color 80 × 36)",
+        "hasSizeFlexibility" : "0",
+        "type" : "Image",
+        "shortDescription" : "",
+        "name" : "input1"
+      }
+    ],
+    "userDefinedMetadata" : {
+
+    },
+    "generatedClassName" : "FourRecognize",
+    "neuralNetworkLayerTypeHistogram" : {
+      "ActivationLinear" : 34,
+      "ActivationReLU" : 17,
+      "Softmax" : 1,
+      "UnaryThreshold" : 17,
+      "BatchNorm" : 17,
+      "Convolution" : 22,
+      "PaddingConstant" : 2
+    },
+    "method" : "predict"
+  }
+]

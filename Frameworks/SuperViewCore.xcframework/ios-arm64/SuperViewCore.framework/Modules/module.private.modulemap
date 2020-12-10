@@ -1,0 +1,4 @@
+framework module SuperViewCore_Private {
+    private header "SuperViewCore/GCDWebServer.h"
+    export *
+}

@@ -1,0 +1,11 @@
+framework module SuperViewFirebase {
+  umbrella header "SuperViewFirebase.h"
+
+  export *
+  module * { export * }
+}
+
+module SuperViewFirebase.Swift {
+    header "SuperViewFirebase-Swift.h"
+    requires objc
+}

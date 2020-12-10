@@ -1,0 +1,22 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SuperViewFacebook
+import FBAudienceNetwork
+import Foundation
+import SuperViewCore
+@_exported import SuperViewFacebook
+import Swift
+extension SuperView : SuperViewCore.SelfFacebookAware {
+  @objc public static func awake()
+}
+extension SuperView {
+  @objc @available(iOS 13, *)
+  public static func configureFacebook()
+}
+extension SuperWebViewController : FBAudienceNetwork.FBAdViewDelegate {
+  @objc dynamic public func adViewDidLoad(_ adView: FBAudienceNetwork.FBAdView)
+}
+extension SuperWebViewController : FBAudienceNetwork.FBInterstitialAdDelegate {
+  @objc dynamic public func interstitialAdWillClose(_ interstitialAd: FBAudienceNetwork.FBInterstitialAd)
+  @objc dynamic public func interstitialAdDidLoad(_ interstitialAd: FBAudienceNetwork.FBInterstitialAd)
+}
