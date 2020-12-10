@@ -21,7 +21,11 @@ Pod::Spec.new do |s|
   }
   s.author       = { 'Brommko LLC' => 'brommko@yahoo.com' }
   s.platform     = :ios, '12.0'
-  s.source       = { :git => 'https://github.com/brommko/SuperView.git', :branch => 'master', :tag => s.version.to_s }
+  s.source       = { 
+    :git => 'https://github.com/brommko/SuperView.git',
+    :tag => s.version.to_s,
+    :submodules => true 
+  }
   s.weak_framework = 'UIKit'
   s.default_subspec = 'Core'
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
