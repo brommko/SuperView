@@ -10,6 +10,6 @@ targets:
         type: folder
     settings:
       INFOPLIST_FILE: Sources/Info.plist
-      PRODUCT_BUNDLE_IDENTIFIER: com.brommko.UniversalWebView
+      PRODUCT_BUNDLE_IDENTIFIER: com.bommko.UniversalWebView
       ENABLE_BITCODE: NO
       CURRENT_PROJECT_VERSION: 1
