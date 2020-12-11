@@ -190,6 +190,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 @import OneSignal;
 @import SuperViewCore;
+@import UserNotifications;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -210,6 +211,16 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 @interface SuperView (SWIFT_EXTENSION(SuperViewOneSignal))
 + (void)awake;
+@end
+
+@class UNUserNotificationCenter;
+@class UNNotification;
+@class UNNotificationResponse;
+
+@interface SuperView (SWIFT_EXTENSION(SuperViewOneSignal)) <UNUserNotificationCenterDelegate>
+- (void)userNotificationCenter:(UNUserNotificationCenter * _Nonnull)center willPresentNotification:(UNNotification * _Nonnull)notification withCompletionHandler:(void (^ _Nonnull)(UNNotificationPresentationOptions))completionHandler;
+- (void)userNotificationCenter:(UNUserNotificationCenter * _Nonnull)center didReceiveNotificationResponse:(UNNotificationResponse * _Nonnull)response withCompletionHandler:(void (^ _Nonnull)(void))completionHandler;
+- (void)userNotificationCenter:(UNUserNotificationCenter * _Nonnull)center openSettingsForNotification:(UNNotification * _Nullable)notification;
 @end
 
 
