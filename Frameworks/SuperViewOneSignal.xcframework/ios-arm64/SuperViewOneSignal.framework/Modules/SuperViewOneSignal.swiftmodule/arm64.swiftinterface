@@ -22,7 +22,7 @@ extension NetworkManager {
 extension SuperView : SuperViewCore.SelfOneSignalAware {
   @objc public static func awake()
 }
-extension SuperView : OneSignal.OSInAppMessageDelegate {
+extension SuperView {
   @objc @available(iOS 13, *)
   public static func configureOneSignal()
 }
