@@ -188,7 +188,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
-@import OneSignal;
 @import SuperViewCore;
 @import UserNotifications;
 #endif
@@ -213,6 +212,11 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 + (void)awake;
 @end
 
+
+@interface SuperView (SWIFT_EXTENSION(SuperViewOneSignal))
++ (void)configureOneSignal SWIFT_AVAILABILITY(ios,introduced=13);
+@end
+
 @class UNUserNotificationCenter;
 @class UNNotification;
 @class UNNotificationResponse;
@@ -221,11 +225,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 - (void)userNotificationCenter:(UNUserNotificationCenter * _Nonnull)center willPresentNotification:(UNNotification * _Nonnull)notification withCompletionHandler:(void (^ _Nonnull)(UNNotificationPresentationOptions))completionHandler;
 - (void)userNotificationCenter:(UNUserNotificationCenter * _Nonnull)center didReceiveNotificationResponse:(UNNotificationResponse * _Nonnull)response withCompletionHandler:(void (^ _Nonnull)(void))completionHandler;
 - (void)userNotificationCenter:(UNUserNotificationCenter * _Nonnull)center openSettingsForNotification:(UNNotification * _Nullable)notification;
-@end
-
-
-@interface SuperView (SWIFT_EXTENSION(SuperViewOneSignal)) <OSInAppMessageDelegate>
-+ (void)configureOneSignal SWIFT_AVAILABILITY(ios,introduced=13);
 @end
 
 
