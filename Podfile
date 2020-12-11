@@ -10,5 +10,7 @@ target 'Example' do
   pod "SuperView/Core"
   pod "SuperView/OneSignal"
   pod "SuperView/AdMob"
-
+  pod "SuperView/Firebase"
+  pod "SuperView/QR"
+  pod "SuperView/Location"
 end
