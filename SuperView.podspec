@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'SuperView'
-  s.version      = '1.2.2'
+  s.version      = '1.2.3'
   s.summary      = 'SuperView allows you to wrap your website in a super simple iOS app.'
   s.description  = 'SuperView iOS SDK provides a library that makes it easy for an iOS developer to wrap his website in a super simple iOS app.'
   s.homepage     = 'https://github.com/brommko/SuperView'
@@ -58,7 +58,7 @@ Pod::Spec.new do |s|
     admob.ios.vendored_frameworks = 'Frameworks/SuperViewAdMob.xcframework'
     admob.dependency 'SuperView/Core'
     admob.dependency 'SuperView/GoogleUtilities'
-    admob.dependency 'Google-Mobile-Ads-SDK', '7.69.0'
+    admob.dependency 'Firebase/AdMob', '7.2.0'
   end
 
   s.subspec 'Firebase' do |firebase|
