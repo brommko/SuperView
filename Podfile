@@ -7,7 +7,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'Example' do
   use_frameworks!
 
-  pod "SuperView"
+  pod "SuperView/Core"
   pod "SuperView/OneSignal"
 
 end

@@ -1,4 +1,0 @@
-framework module SuperViewCardScan {
-  header "SuperViewCardScan-Swift.h"
-  requires objc
-}
