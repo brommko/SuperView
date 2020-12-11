@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import <SuperViewOneSignal/OneSignal.h>
 
 //! Project version number for SuperViewOneSignal.
 FOUNDATION_EXPORT double SuperViewOneSignalVersionNumber;

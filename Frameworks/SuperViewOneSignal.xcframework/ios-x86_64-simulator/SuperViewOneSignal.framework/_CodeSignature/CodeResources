@@ -6,11 +6,11 @@
 	<dict>
 		<key>Headers/SuperViewOneSignal-Swift.h</key>
 		<data>
-		ON2kj/UrO6zMDIbFh0P00i05jKU=
+		HiDu9w4kfduYE62VTyHJ1boGf64=
 		</data>
 		<key>Headers/SuperViewOneSignal.h</key>
 		<data>
-		laVxBGTDO5HNt3aG4lg9mSRWR/Y=
+		sGWOjXrMZHWx2ABcmyVGNQtma1w=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/SuperViewOneSignal.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		iz+JU2YJ8bnJs5plDQbxdxMXvOA=
+		OxT+tJKMndHmdRhPwkrOe8fRuA0=
 		</data>
 		<key>Modules/SuperViewOneSignal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		V8eyolKkIXVTezpPRi2Isyr08Bg=
+		lzD7TEJ0T22ePdpLQr5Bz6BfVq8=
 		</data>
 		<key>Modules/SuperViewOneSignal.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -34,19 +34,15 @@
 		</data>
 		<key>Modules/SuperViewOneSignal.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		iz+JU2YJ8bnJs5plDQbxdxMXvOA=
+		OxT+tJKMndHmdRhPwkrOe8fRuA0=
 		</data>
 		<key>Modules/SuperViewOneSignal.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		V8eyolKkIXVTezpPRi2Isyr08Bg=
+		lzD7TEJ0T22ePdpLQr5Bz6BfVq8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		vhX4013Ge86WQnv5/GJaJ3xmTXY=
-		</data>
-		<key>Modules/module.private.modulemap</key>
-		<data>
-		tX1/SVhzY7xYGB4oinBntRo6NVs=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -55,14 +51,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			xWx1gtHG22wRZMVhuJ00c5wcJBNhKDwZjlvqTXXmd4I=
+			09oVatbUXeVTdcDDCNuPxTaAHyBf5hXde4U6CKuSFu4=
 			</data>
 		</dict>
 		<key>Headers/SuperViewOneSignal.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mi4sqRoiWUxY7ZKWgdVPuhcRDjjvBVigjdvITwtY6tk=
+			wXzXnb2ux8XECkAtFfAfOa/5721P8qvk+uu1kAfrWRc=
 			</data>
 		</dict>
 		<key>Modules/SuperViewOneSignal.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -76,14 +72,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8A/pNacFBEWSXD8Cghh/IoFIdpPuUyjCxYnA0o48H7k=
+			MVANISFPtXWaXNvQIWkM9cBo1wcow0m9fBM6Jk885C4=
 			</data>
 		</dict>
 		<key>Modules/SuperViewOneSignal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			S66MzUwkfj2Jm3gLnK09Sih3O5AOfjoFROPKoveh9qA=
+			jk3WSbgwNxuogHKTux3E9q8FZnE8XwgGZbAlBEP2uwk=
 			</data>
 		</dict>
 		<key>Modules/SuperViewOneSignal.swiftmodule/x86_64.swiftdoc</key>
@@ -97,14 +93,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8A/pNacFBEWSXD8Cghh/IoFIdpPuUyjCxYnA0o48H7k=
+			MVANISFPtXWaXNvQIWkM9cBo1wcow0m9fBM6Jk885C4=
 			</data>
 		</dict>
 		<key>Modules/SuperViewOneSignal.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			S66MzUwkfj2Jm3gLnK09Sih3O5AOfjoFROPKoveh9qA=
+			jk3WSbgwNxuogHKTux3E9q8FZnE8XwgGZbAlBEP2uwk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -112,13 +108,6 @@
 			<key>hash2</key>
 			<data>
 			JRuTC+fmFOsxmrURMq23EfBuc7GcXi8ZdkstTeq37yg=
-			</data>
-		</dict>
-		<key>Modules/module.private.modulemap</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			XQH6rxBHDZx37ITOUiN2JLPBA/YwfxI+B9kt+t/E6vo=
 			</data>
 		</dict>
 	</dict>

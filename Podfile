@@ -9,5 +9,6 @@ target 'Example' do
 
   pod "SuperView/Core"
   pod "SuperView/OneSignal"
+  pod "SuperView/AdMob"
 
 end
