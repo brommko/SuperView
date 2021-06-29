@@ -6,11 +6,11 @@
 	<dict>
 		<key>Headers/OneSignal.h</key>
 		<data>
-		JDKuV5PV1hQSBYOzlketlpxhY94=
+		BLD4jYD/TpJymJPeuBhvFcyFbgw=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		276EZyxACH8M3CWlyjrvtS8Z2z4=
+		JZO0iD7en3vQ5gMvtQTCsfLUj9c=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -21,21 +21,13 @@
 	<dict>
 		<key>Headers/OneSignal.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			JDKuV5PV1hQSBYOzlketlpxhY94=
-			</data>
 			<key>hash2</key>
 			<data>
-			98NdA26nQgZo+aqE0vd8QGdi8FyBpi3osQzDS1FPK5U=
+			ejbMIRRYTnU9t5kqK7YwnDP4rbpTj+sdUflpW0FmvoM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			fJj0ATF9ohjya70dUZjH6i9w44o=
-			</data>
 			<key>hash2</key>
 			<data>
 			Gn6ZaR3ERppbMM1cYIPVzhn7nRrRbOZoQYYdkOd4nJw=
