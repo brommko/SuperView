@@ -4,9 +4,21 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Frameworks/OneSignal.framework/Info.plist</key>
+		<data>
+		JZO0iD7en3vQ5gMvtQTCsfLUj9c=
+		</data>
+		<key>Frameworks/OneSignal.framework/OneSignal</key>
+		<data>
+		7UVgGcwOLg1UM1XW9Sh1DaN+lGg=
+		</data>
+		<key>Frameworks/OneSignal.framework/_CodeSignature/CodeResources</key>
+		<data>
+		+Ri89OgWbHIMp+sohBEq9x3A6cc=
+		</data>
 		<key>Headers/SuperViewOneSignal-Swift.h</key>
 		<data>
-		Zr9yUP7mb/oFKJQ4aNxM5CYz8p4=
+		sCTW01hIG29+oNJ7DZgBY7n6sKU=
 		</data>
 		<key>Headers/SuperViewOneSignal.h</key>
 		<data>
@@ -14,31 +26,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		7yQDcFyMWmN2OGBkNN+ej5ZxTwU=
+		CWvMFgLi1A7UEtkxIlqPtCeWyAs=
 		</data>
 		<key>Modules/SuperViewOneSignal.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		4R7y+fqh/CaOlkYh5lG0oJcPRtM=
+		WBpgzeiefKMPNN7yZMqkoIsQR5A=
 		</data>
 		<key>Modules/SuperViewOneSignal.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		hfkbWY4BpPaNLto/6D3PX/coniU=
+		U0YvnQcLn7fgBUoVBnNZ80cLh+0=
 		</data>
 		<key>Modules/SuperViewOneSignal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Wy8IifB0ZT6hbUq01flAeOj8Q18=
+		sn4NJD6TBKDKo2fPpMBBvm9hxGE=
 		</data>
 		<key>Modules/SuperViewOneSignal.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		4R7y+fqh/CaOlkYh5lG0oJcPRtM=
+		WBpgzeiefKMPNN7yZMqkoIsQR5A=
 		</data>
 		<key>Modules/SuperViewOneSignal.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		hfkbWY4BpPaNLto/6D3PX/coniU=
+		U0YvnQcLn7fgBUoVBnNZ80cLh+0=
 		</data>
 		<key>Modules/SuperViewOneSignal.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		Wy8IifB0ZT6hbUq01flAeOj8Q18=
+		sn4NJD6TBKDKo2fPpMBBvm9hxGE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,11 +59,32 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Frameworks/OneSignal.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GL2QzcEqgT19aMJzTGont4xC1Q5Xuo6fOCjhuJIfdD8=
+			</data>
+		</dict>
+		<key>Frameworks/OneSignal.framework/OneSignal</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			zsgELmPctQkRCXvMVPaGCO+CoBx78KCj252fe+S6k1Y=
+			</data>
+		</dict>
+		<key>Frameworks/OneSignal.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			yQJoaLKwW51+1jq/hMH0HjunxcqIfLVJqy5/cnz6iG8=
+			</data>
+		</dict>
 		<key>Headers/SuperViewOneSignal-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VTk3EnhkQiA6sLOKMKn9gW5yKqIfv7jprq9/X+P00vA=
+			CV0HHpgpGVp3kCxX55RV9xnx+WgVl9l74tCkucQOHmY=
 			</data>
 		</dict>
 		<key>Headers/SuperViewOneSignal.h</key>
@@ -65,42 +98,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/wYTqAha2DNoKVGsXKH7LKxkkaWCFlRwFtJCT9xFzVA=
+			PbhaGN0bol92y9eZY0qYPmaGbmWcGZ4DwtfO8VWKvd4=
 			</data>
 		</dict>
 		<key>Modules/SuperViewOneSignal.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JkTOkP3/9R74gveXkhLZuvdo57HKRJOrxSbVVf72zbg=
+			EucdazoGp66JLaWXd1//GXDpX0CAEtwt19Wuu0KdHFM=
 			</data>
 		</dict>
 		<key>Modules/SuperViewOneSignal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OM3bhX7pBHEqZ3z05f8/+/oLQzCNKYF/H6BiZvL7PnA=
+			5p7jTE6Pp0GYNo/XzlAWUtOulFxDVDh6wjplsknj4HM=
 			</data>
 		</dict>
 		<key>Modules/SuperViewOneSignal.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/wYTqAha2DNoKVGsXKH7LKxkkaWCFlRwFtJCT9xFzVA=
+			PbhaGN0bol92y9eZY0qYPmaGbmWcGZ4DwtfO8VWKvd4=
 			</data>
 		</dict>
 		<key>Modules/SuperViewOneSignal.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JkTOkP3/9R74gveXkhLZuvdo57HKRJOrxSbVVf72zbg=
+			EucdazoGp66JLaWXd1//GXDpX0CAEtwt19Wuu0KdHFM=
 			</data>
 		</dict>
 		<key>Modules/SuperViewOneSignal.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OM3bhX7pBHEqZ3z05f8/+/oLQzCNKYF/H6BiZvL7PnA=
+			5p7jTE6Pp0GYNo/XzlAWUtOulFxDVDh6wjplsknj4HM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

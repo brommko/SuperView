@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SuperViewFacebook-Swift.h</key>
 		<data>
-		KVLom+aBpbkdgCWFJeGmwG8W2V0=
+		7WaAo6Bi56vfmTwAcsqx5mmxHtI=
 		</data>
 		<key>Headers/SuperViewFacebook.h</key>
 		<data>
@@ -14,31 +14,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Zo6VVjjU3s4fepV+8q2VIcW6t9k=
+		T6gf0IBLsMEArMs3iiia2ePWhxo=
 		</data>
 		<key>Modules/SuperViewFacebook.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		QAhlH6lbW/mP4Fo8ATnAXKsIctw=
+		F58dsIwDeb7p7nZetJIvHbaKLPM=
 		</data>
 		<key>Modules/SuperViewFacebook.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		6al03Cr2LZ21bjQBCh5eXKfkhns=
+		lrLZrhZ03RYud+MIHtsUfFTwmS4=
 		</data>
 		<key>Modules/SuperViewFacebook.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		BiMlYhDZaptkxZTnnJ2a0+nzgMU=
+		KbBmh9aw6NgdOjJuoj5KSeeP/Hg=
 		</data>
 		<key>Modules/SuperViewFacebook.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		QAhlH6lbW/mP4Fo8ATnAXKsIctw=
+		F58dsIwDeb7p7nZetJIvHbaKLPM=
 		</data>
 		<key>Modules/SuperViewFacebook.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		6al03Cr2LZ21bjQBCh5eXKfkhns=
+		lrLZrhZ03RYud+MIHtsUfFTwmS4=
 		</data>
 		<key>Modules/SuperViewFacebook.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		BiMlYhDZaptkxZTnnJ2a0+nzgMU=
+		KbBmh9aw6NgdOjJuoj5KSeeP/Hg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -51,7 +51,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dR+xR1NNurYehoRJCwBtjWwQ7ze2sfnK1+n/45mqofg=
+			qyEtnUjm8ac4iHIEKuB1eUFH409zExlAiTld9u8oA9k=
 			</data>
 		</dict>
 		<key>Headers/SuperViewFacebook.h</key>
@@ -65,42 +65,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hutmpNbGsnwPus7blaJKlinZQIxm5On09Yrw77pSzu4=
+			/RqYoylLcHBLlhLle8VLusGHOgQMfjqp/XcPwEiweD4=
 			</data>
 		</dict>
 		<key>Modules/SuperViewFacebook.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OZbL8oFi7YGVdzjYOFbGxT+M8WlUcRiAjPHJ4kuxok4=
+			vZgwsHYGh+FCoIqcC2LTHsMf9ck4Sag9Sy32q3b/hDw=
 			</data>
 		</dict>
 		<key>Modules/SuperViewFacebook.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VYwoWSjzYznoCyhcCmbU7/oC5v/J7vcOq9JvubOBBTM=
+			nSjSV7KwpBZlobTLsBYxYZkzzzFLuIJl8QvQLbdvB+E=
 			</data>
 		</dict>
 		<key>Modules/SuperViewFacebook.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hutmpNbGsnwPus7blaJKlinZQIxm5On09Yrw77pSzu4=
+			/RqYoylLcHBLlhLle8VLusGHOgQMfjqp/XcPwEiweD4=
 			</data>
 		</dict>
 		<key>Modules/SuperViewFacebook.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OZbL8oFi7YGVdzjYOFbGxT+M8WlUcRiAjPHJ4kuxok4=
+			vZgwsHYGh+FCoIqcC2LTHsMf9ck4Sag9Sy32q3b/hDw=
 			</data>
 		</dict>
 		<key>Modules/SuperViewFacebook.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VYwoWSjzYznoCyhcCmbU7/oC5v/J7vcOq9JvubOBBTM=
+			nSjSV7KwpBZlobTLsBYxYZkzzzFLuIJl8QvQLbdvB+E=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
