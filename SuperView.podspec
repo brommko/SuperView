@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'SuperView'
-  s.version      = '1.2.6'
+  s.version      = '1.2.7'
   s.summary      = 'SuperView allows you to wrap your website in a super simple iOS app.'
   s.description  = 'SuperView iOS SDK provides a library that makes it easy for an iOS developer to wrap his website in a super simple iOS app.'
   s.homepage     = 'https://github.com/brommko/SuperView'
@@ -33,7 +33,6 @@ Pod::Spec.new do |s|
     core.ios.deployment_target = '12.0'
     core.ios.vendored_frameworks = 'Frameworks/SuperViewCore.xcframework'
     core.dependency 'GCDWebServer', '3.5.4'
-    core.dependency 'ReachabilitySwift', '5.0.0'
   end
 
   s.subspec 'OneSignal' do |onesignal|
