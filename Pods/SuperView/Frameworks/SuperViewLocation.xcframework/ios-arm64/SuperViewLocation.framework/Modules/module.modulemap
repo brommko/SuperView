@@ -1,0 +1,11 @@
+framework module SuperViewLocation {
+  umbrella header "SuperViewLocation.h"
+
+  export *
+  module * { export * }
+}
+
+module SuperViewLocation.Swift {
+    header "SuperViewLocation-Swift.h"
+    requires objc
+}

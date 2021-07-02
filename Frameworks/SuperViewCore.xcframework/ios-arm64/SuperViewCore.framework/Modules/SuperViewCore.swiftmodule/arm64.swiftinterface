@@ -6,11 +6,11 @@ import Foundation
 import GCDWebServer
 import PDFKit
 import QuartzCore
+import Reachability
 import SafariServices
 import StoreKit
 @_exported import SuperViewCore
 import Swift
-import SystemConfiguration
 import UIKit
 import UserNotifications
 import WebKit
@@ -669,87 +669,6 @@ public typealias FadeOutAnimation = (UIKit.UIView, @escaping () -> Swift.Void) -
   @objc override dynamic public init(frame: CoreGraphics.CGRect)
   @objc deinit
 }
-public enum ReachabilityError : Swift.Error {
-  case failedToCreateWithAddress(Darwin.sockaddr, Swift.Int32)
-  case failedToCreateWithHostname(Swift.String, Swift.Int32)
-  case unableToSetCallback(Swift.Int32)
-  case unableToSetDispatchQueue(Swift.Int32)
-  case unableToGetFlags(Swift.Int32)
-}
-@available(*, unavailable, renamed: "Notification.Name.reachabilityChanged")
-public let ReachabilityChangedNotification: Foundation.NSNotification.Name
-extension NSNotification.Name {
-  public static let reachabilityChanged: Foundation.Notification.Name
-}
-public class Reachability {
-  public typealias NetworkReachable = (SuperViewCore.Reachability) -> ()
-  public typealias NetworkUnreachable = (SuperViewCore.Reachability) -> ()
-  @available(*, unavailable, renamed: "Connection")
-  public enum NetworkStatus : Swift.CustomStringConvertible {
-    case notReachable, reachableViaWiFi, reachableViaWWAN
-    public var description: Swift.String {
-      get
-    }
-    public static func == (a: SuperViewCore.Reachability.NetworkStatus, b: SuperViewCore.Reachability.NetworkStatus) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-  }
-  public enum Connection : Swift.CustomStringConvertible {
-    @available(*, deprecated, renamed: "unavailable")
-    case none
-    case unavailable, wifi, cellular
-    public var description: Swift.String {
-      get
-    }
-    public static func == (a: SuperViewCore.Reachability.Connection, b: SuperViewCore.Reachability.Connection) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-  }
-  public var whenReachable: SuperViewCore.Reachability.NetworkReachable?
-  public var whenUnreachable: SuperViewCore.Reachability.NetworkUnreachable?
-  @available(*, deprecated, renamed: "allowsCellularConnection")
-  final public let reachableOnWWAN: Swift.Bool
-  public var allowsCellularConnection: Swift.Bool
-  public var notificationCenter: Foundation.NotificationCenter
-  @available(*, deprecated, renamed: "connection.description")
-  public var currentReachabilityString: Swift.String {
-    get
-  }
-  @available(*, unavailable, renamed: "connection")
-  public var currentReachabilityStatus: SuperViewCore.Reachability.Connection {
-    get
-  }
-  public var connection: SuperViewCore.Reachability.Connection {
-    get
-  }
-  required public init(reachabilityRef: SystemConfiguration.SCNetworkReachability, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main)
-  convenience public init(hostname: Swift.String, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
-  convenience public init(queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
-  @objc deinit
-}
-extension Reachability {
-  public func startNotifier() throws
-  public func stopNotifier()
-  @available(*, deprecated, message: "Please use `connection != .none`")
-  public var isReachable: Swift.Bool {
-    get
-  }
-  @available(*, deprecated, message: "Please use `connection == .cellular`")
-  public var isReachableViaWWAN: Swift.Bool {
-    get
-  }
-  @available(*, deprecated, message: "Please use `connection == .wifi`")
-  public var isReachableViaWiFi: Swift.Bool {
-    get
-  }
-  public var description: Swift.String {
-    get
-  }
-}
 @objc @_inheritsConvenienceInitializers public class SideMenuViewController : UIKit.UIViewController {
   @objc override dynamic public func prepare(for segue: UIKit.UIStoryboardSegue, sender: Any?)
   @objc override dynamic public func viewDidLoad()
@@ -786,9 +705,3 @@ extension SuperViewCore.SuperWebViewEvent : Swift.Hashable {}
 extension SuperViewCore.NVActivityIndicatorType : Swift.Equatable {}
 extension SuperViewCore.NVActivityIndicatorType : Swift.Hashable {}
 extension SuperViewCore.NVActivityIndicatorType : Swift.RawRepresentable {}
-@available(*, unavailable, renamed: "Connection")
-extension SuperViewCore.Reachability.NetworkStatus : Swift.Equatable {}
-@available(*, unavailable, renamed: "Connection")
-extension SuperViewCore.Reachability.NetworkStatus : Swift.Hashable {}
-extension SuperViewCore.Reachability.Connection : Swift.Equatable {}
-extension SuperViewCore.Reachability.Connection : Swift.Hashable {}
