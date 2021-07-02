@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'SuperView'
-  s.version      = '1.2.4'
+  s.version      = '1.2.6'
   s.summary      = 'SuperView allows you to wrap your website in a super simple iOS app.'
   s.description  = 'SuperView iOS SDK provides a library that makes it easy for an iOS developer to wrap his website in a super simple iOS app.'
   s.homepage     = 'https://github.com/brommko/SuperView'
@@ -28,8 +28,6 @@ Pod::Spec.new do |s|
   }
   s.weak_framework = 'UIKit'
   s.default_subspec = 'Core'
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.swift_versions = '5.3'
   s.subspec 'Core' do |core|
     core.ios.deployment_target = '12.0'
