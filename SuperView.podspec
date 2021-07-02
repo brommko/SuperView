@@ -34,6 +34,7 @@ Pod::Spec.new do |s|
   s.subspec 'Core' do |core|
     core.ios.deployment_target = '12.0'
     core.ios.vendored_frameworks = 'Frameworks/SuperViewCore.xcframework'
+    core.dependency 'GCDWebServer', '3.5.4'
   end
 
   s.subspec 'OneSignal' do |onesignal|

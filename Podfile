@@ -7,10 +7,10 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'Example' do
   use_frameworks!
 
-  pod "SuperView/Core"
-  pod "SuperView/OneSignal"
-  pod "SuperView/AdMob"
-  pod "SuperView/Firebase"
-  pod "SuperView/QR"
-  pod "SuperView/Location"
+  pod "SuperView/Core", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.4'
+  pod "SuperView/OneSignal", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.4'
+  pod "SuperView/AdMob", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.4'
+  pod "SuperView/Firebase", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.4'
+  pod "SuperView/QR", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.4'
+  pod "SuperView/Location", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.4'
 end
