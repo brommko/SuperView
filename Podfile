@@ -7,12 +7,12 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'Example' do
   use_frameworks!
 
-  pod "SuperView/Core", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.6'
-  pod "SuperView/OneSignal", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.6'
-  pod "SuperView/AdMob", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.6'
-  pod "SuperView/Firebase", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.6'
-  pod "SuperView/QR", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.6'
-  pod "SuperView/Location", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.6'
+  pod "SuperView/Core", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.8'
+  pod "SuperView/OneSignal", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.8'
+  pod "SuperView/AdMob", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.8'
+  pod "SuperView/Firebase", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.8'
+  pod "SuperView/QR", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.8'
+  pod "SuperView/Location", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.8'
 end
 
 post_install do |installer|
