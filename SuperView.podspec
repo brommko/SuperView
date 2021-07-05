@@ -29,8 +29,8 @@ Pod::Spec.new do |s|
   s.weak_framework = 'UIKit'
   s.default_subspec = 'Core'
   s.swift_versions = '5.3'
+  s.pod_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
   s.subspec 'Core' do |core|
-    core.user_target_xcconfig = { 'BUILD_LIBRARY_FOR_DISTRIBUTION' => 'YES' }
     core.ios.deployment_target = '12.0'
     core.ios.vendored_frameworks = 'Frameworks/SuperViewCore.xcframework'
     core.dependency 'GCDWebServer', '3.5.4'
