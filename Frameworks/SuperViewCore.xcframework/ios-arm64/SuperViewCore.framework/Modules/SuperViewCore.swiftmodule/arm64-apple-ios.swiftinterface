@@ -1,16 +1,16 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
 // swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SuperViewCore
 import AVFoundation
 import Foundation
 import GCDWebServer
 import PDFKit
 import QuartzCore
+import Reachability
 import SafariServices
 import StoreKit
 @_exported import SuperViewCore
 import Swift
-import SystemConfiguration
 import UIKit
 import UserNotifications
 import WebKit
@@ -20,8 +20,8 @@ import WebKit
 }
 @objc public enum NavigationBarState : Swift.Int {
   case collapsed, expanded, scrolling
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -29,8 +29,8 @@ import WebKit
 @objc public enum NavigationBarCollapseDirection : Swift.Int {
   case scrollUp = -1
   case scrollDown = 1
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -38,8 +38,8 @@ import WebKit
 @objc public enum NavigationBarFollowerCollapseDirection : Swift.Int {
   case scrollUp = -1
   case scrollDown = 1
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -48,8 +48,8 @@ import WebKit
   @objc weak public var view: UIKit.UIView?
   @objc public var direction: SuperViewCore.NavigationBarFollowerCollapseDirection
   @objc public init(view: UIKit.UIView, direction: SuperViewCore.NavigationBarFollowerCollapseDirection = .scrollUp)
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @objcMembers open class ScrollingNavigationController : UIKit.UINavigationController, UIKit.UIGestureRecognizerDelegate {
   @objc open var state: SuperViewCore.NavigationBarState {
@@ -99,10 +99,10 @@ public struct SideMenuEnums {
     case left
     case right
     public static func == (a: SuperViewCore.SideMenuEnums.Position, b: SuperViewCore.SideMenuEnums.Position) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
-    public func hash(into hasher: inout Swift.Hasher)
   }
 }
 public struct FreshchatOptions : Swift.Codable {
@@ -160,87 +160,6 @@ public struct ActivityIndicatorOptions : Swift.Codable {
 }
 extension NSNotification.Name {
   public static let superViewOpenURL: Foundation.NSNotification.Name
-}
-public enum ReachabilityError : Swift.Error {
-  case failedToCreateWithAddress(Darwin.sockaddr, Swift.Int32)
-  case failedToCreateWithHostname(Swift.String, Swift.Int32)
-  case unableToSetCallback(Swift.Int32)
-  case unableToSetDispatchQueue(Swift.Int32)
-  case unableToGetFlags(Swift.Int32)
-}
-@available(*, unavailable, renamed: "Notification.Name.reachabilityChanged")
-public let ReachabilityChangedNotification: Foundation.NSNotification.Name
-extension NSNotification.Name {
-  public static let reachabilityChanged: Foundation.Notification.Name
-}
-public class Reachability {
-  public typealias NetworkReachable = (SuperViewCore.Reachability) -> ()
-  public typealias NetworkUnreachable = (SuperViewCore.Reachability) -> ()
-  @available(*, unavailable, renamed: "Connection")
-  public enum NetworkStatus : Swift.CustomStringConvertible {
-    case notReachable, reachableViaWiFi, reachableViaWWAN
-    public var description: Swift.String {
-      get
-    }
-    public static func == (a: SuperViewCore.Reachability.NetworkStatus, b: SuperViewCore.Reachability.NetworkStatus) -> Swift.Bool
-    public var hashValue: Swift.Int {
-      get
-    }
-    public func hash(into hasher: inout Swift.Hasher)
-  }
-  public enum Connection : Swift.CustomStringConvertible {
-    case unavailable, wifi, cellular
-    public var description: Swift.String {
-      get
-    }
-    @available(*, deprecated, renamed: "unavailable")
-    public static let none: SuperViewCore.Reachability.Connection
-    public static func == (a: SuperViewCore.Reachability.Connection, b: SuperViewCore.Reachability.Connection) -> Swift.Bool
-    public var hashValue: Swift.Int {
-      get
-    }
-    public func hash(into hasher: inout Swift.Hasher)
-  }
-  public var whenReachable: SuperViewCore.Reachability.NetworkReachable?
-  public var whenUnreachable: SuperViewCore.Reachability.NetworkUnreachable?
-  @available(*, deprecated, renamed: "allowsCellularConnection")
-  final public let reachableOnWWAN: Swift.Bool
-  public var allowsCellularConnection: Swift.Bool
-  public var notificationCenter: Foundation.NotificationCenter
-  @available(*, deprecated, renamed: "connection.description")
-  public var currentReachabilityString: Swift.String {
-    get
-  }
-  @available(*, unavailable, renamed: "connection")
-  public var currentReachabilityStatus: SuperViewCore.Reachability.Connection {
-    get
-  }
-  public var connection: SuperViewCore.Reachability.Connection {
-    get
-  }
-  required public init(reachabilityRef: SystemConfiguration.SCNetworkReachability, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main)
-  convenience public init(hostname: Swift.String, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
-  convenience public init(queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
-  @objc deinit
-}
-extension Reachability {
-  public func startNotifier() throws
-  public func stopNotifier()
-  @available(*, deprecated, message: "Please use `connection != .none`")
-  public var isReachable: Swift.Bool {
-    get
-  }
-  @available(*, deprecated, message: "Please use `connection == .cellular`")
-  public var isReachableViaWWAN: Swift.Bool {
-    get
-  }
-  @available(*, deprecated, message: "Please use `connection == .wifi`")
-  public var isReachableViaWiFi: Swift.Bool {
-    get
-  }
-  public var description: Swift.String {
-    get
-  }
 }
 public struct WebViewOptions : Swift.Codable {
   public var url: Swift.String?
@@ -312,8 +231,8 @@ public enum RestMethod : Swift.String {
   case post
   case put
   case delete
-  public typealias RawValue = Swift.String
   public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
@@ -321,8 +240,8 @@ public enum RestMethod : Swift.String {
 public enum Endpoint : Swift.String {
   case oneSignal
   case envatoSale
-  public typealias RawValue = Swift.String
   public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
@@ -515,10 +434,10 @@ public enum SuperWebViewEvent {
   case startActivityIndicator
   case stopActivityIndicator
   public static func == (a: SuperViewCore.SuperWebViewEvent, b: SuperViewCore.SuperWebViewEvent) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 public protocol SuperWebViewDelegate : AnyObject {
   func superWebView(_ event: SuperViewCore.SuperWebViewEvent)
@@ -704,8 +623,8 @@ public enum NVActivityIndicatorType : Swift.Int {
   case orbit
   case audioEqualizer
   case circleStrokeSpin
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -760,9 +679,9 @@ public typealias FadeOutAnimation = (UIKit.UIView, @escaping () -> Swift.Void) -
   public func showMenu()
   public func hideMenu()
   @objc public func dismissSideMenuViewController()
-  @objc deinit
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
 }
 extension SuperViewCore.NavigationBarState : Swift.Equatable {}
 extension SuperViewCore.NavigationBarState : Swift.Hashable {}
@@ -775,12 +694,6 @@ extension SuperViewCore.NavigationBarFollowerCollapseDirection : Swift.Hashable 
 extension SuperViewCore.NavigationBarFollowerCollapseDirection : Swift.RawRepresentable {}
 extension SuperViewCore.SideMenuEnums.Position : Swift.Equatable {}
 extension SuperViewCore.SideMenuEnums.Position : Swift.Hashable {}
-@available(*, unavailable, renamed: "Connection")
-extension SuperViewCore.Reachability.NetworkStatus : Swift.Equatable {}
-@available(*, unavailable, renamed: "Connection")
-extension SuperViewCore.Reachability.NetworkStatus : Swift.Hashable {}
-extension SuperViewCore.Reachability.Connection : Swift.Equatable {}
-extension SuperViewCore.Reachability.Connection : Swift.Hashable {}
 extension SuperViewCore.RestMethod : Swift.Equatable {}
 extension SuperViewCore.RestMethod : Swift.Hashable {}
 extension SuperViewCore.RestMethod : Swift.RawRepresentable {}
