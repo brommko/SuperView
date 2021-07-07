@@ -4,18 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Frameworks/OneSignal.framework/Info.plist</key>
-		<data>
-		JZO0iD7en3vQ5gMvtQTCsfLUj9c=
-		</data>
-		<key>Frameworks/OneSignal.framework/OneSignal</key>
-		<data>
-		7UVgGcwOLg1UM1XW9Sh1DaN+lGg=
-		</data>
-		<key>Frameworks/OneSignal.framework/_CodeSignature/CodeResources</key>
-		<data>
-		+Ri89OgWbHIMp+sohBEq9x3A6cc=
-		</data>
 		<key>Headers/SuperViewOneSignal-Swift.h</key>
 		<data>
 		6w9kGMq2Z/5dIBEskeOQ0GKo4zE=
@@ -83,27 +71,6 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Frameworks/OneSignal.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			GL2QzcEqgT19aMJzTGont4xC1Q5Xuo6fOCjhuJIfdD8=
-			</data>
-		</dict>
-		<key>Frameworks/OneSignal.framework/OneSignal</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			zsgELmPctQkRCXvMVPaGCO+CoBx78KCj252fe+S6k1Y=
-			</data>
-		</dict>
-		<key>Frameworks/OneSignal.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			yQJoaLKwW51+1jq/hMH0HjunxcqIfLVJqy5/cnz6iG8=
-			</data>
-		</dict>
 		<key>Headers/SuperViewOneSignal-Swift.h</key>
 		<dict>
 			<key>hash2</key>
