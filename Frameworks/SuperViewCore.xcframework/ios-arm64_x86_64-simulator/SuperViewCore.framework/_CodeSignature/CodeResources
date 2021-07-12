@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		zqVfVVxUZdN99BsvEo0PSVI7Fe0=
+		TG5YlZpLi/2IwKatR/y+OIG9nB4=
 		</data>
 		<key>Headers/SuperViewCore-Swift.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/SuperViewCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		5+K5xMHZ6+6ZGZhg5Knx6eVNvro=
+		/D7oRflm9oZsYv4+AHLT7xvFPf4=
 		</data>
 		<key>Modules/SuperViewCore.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/SuperViewCore.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		5+K5xMHZ6+6ZGZhg5Knx6eVNvro=
+		/D7oRflm9oZsYv4+AHLT7xvFPf4=
 		</data>
 		<key>Modules/SuperViewCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/SuperViewCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		1qPQYRYj+O9uo9M11WB951HLnEA=
+		FcyMB9x3k30IlKqKTsD8qeNamI0=
 		</data>
 		<key>Modules/SuperViewCore.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Modules/SuperViewCore.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		1qPQYRYj+O9uo9M11WB951HLnEA=
+		FcyMB9x3k30IlKqKTsD8qeNamI0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -74,11 +74,11 @@
 		</data>
 		<key>SideMenuCell.nib</key>
 		<data>
-		qcLNKdUce0Dce6nBK2/v9guIj6s=
+		4s6jYTgS8bIYysQ7xvA2NK35yFY=
 		</data>
 		<key>SideMenuViewController.storyboardc/AaJ-yH-8lv-view-vjW-pG-3FK.nib</key>
 		<data>
-		PquglTwQDvQ6JF9QLsQ+7sFTHe0=
+		ShzhaQx+9rVGIE8eUTxP/yyIwSs=
 		</data>
 		<key>SideMenuViewController.storyboardc/Info.plist</key>
 		<data>
@@ -86,19 +86,19 @@
 		</data>
 		<key>SideMenuViewController.storyboardc/OdO-i0-PIX-view-NeB-wc-lXR.nib</key>
 		<data>
-		nmCj1Z1NMx1/ObI672xB3x1S1G8=
+		+0jiOSgWmifnk1sl5LFNxu4e/OE=
 		</data>
 		<key>SideMenuViewController.storyboardc/SideMenuTableViewController.nib</key>
 		<data>
-		DlX0IN+sj5LQDvSAvXTEEGRrMfQ=
+		dVzHzIlpPyAkQA1oMWabM2c6BPo=
 		</data>
 		<key>SideMenuViewController.storyboardc/SideMenuViewController.nib</key>
 		<data>
-		zY/CYcUWfr+j8kCtNUSHOvbbbp8=
+		qUs3ypojLWmUemgI4S5o2gmtBlo=
 		</data>
 		<key>SideMenuViewController.storyboardc/UINavigationController-IZY-qx-W6j.nib</key>
 		<data>
-		nmW9N4b44YeTpps5oPwg4KKlCpI=
+		1wRpeP1Q5lmOdavSchvf7XBUSUI=
 		</data>
 		<key>bird.mp3</key>
 		<data>
@@ -263,7 +263,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZCVZ+nL1QIPuO0aZlP953Jt/ygQHL7wr0JPVrL1hOg0=
+			HScCz6YeEy7YttO1vjHKEePe2Ry5QkZJczZlrYHBdgg=
 			</data>
 		</dict>
 		<key>Headers/SuperViewCore-Swift.h</key>
@@ -298,7 +298,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			f4/2biE12hBLTl7z4DdQiB1P26QfyLPIsvllIjmH7B4=
+			EsuRSMJ1Ys/SP5jXR0c7AUp8Dj5HqtxSLN/jNHGhKkI=
 			</data>
 		</dict>
 		<key>Modules/SuperViewCore.swiftmodule/arm64.swiftdoc</key>
@@ -319,7 +319,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			f4/2biE12hBLTl7z4DdQiB1P26QfyLPIsvllIjmH7B4=
+			EsuRSMJ1Ys/SP5jXR0c7AUp8Dj5HqtxSLN/jNHGhKkI=
 			</data>
 		</dict>
 		<key>Modules/SuperViewCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -340,7 +340,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bDdhMBB/+6XjirHPWZZTpz90w4KRo/Oq8DSPqr786n4=
+			rrk1d26YnA5NPcQFVbhlDBG4/i+m0BgAFtapcClWsGk=
 			</data>
 		</dict>
 		<key>Modules/SuperViewCore.swiftmodule/x86_64.swiftdoc</key>
@@ -361,7 +361,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bDdhMBB/+6XjirHPWZZTpz90w4KRo/Oq8DSPqr786n4=
+			rrk1d26YnA5NPcQFVbhlDBG4/i+m0BgAFtapcClWsGk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -375,14 +375,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MIgiu7hitBVmsWcpg90pArowYg/22GLLFrAOptVeLE8=
+			kV39Z2Ndj2weWdllWeWjqlzGu1Le2e0J9qSQLtv3XeI=
 			</data>
 		</dict>
 		<key>SideMenuViewController.storyboardc/AaJ-yH-8lv-view-vjW-pG-3FK.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NPTrYOzahzEL4/RGyZiPPO/NzqS28tIX70GZTD0jJUs=
+			SIlvkKXQRQL4EF6KSClyrgHxVtlXsDOAsU3dDGzTP+g=
 			</data>
 		</dict>
 		<key>SideMenuViewController.storyboardc/Info.plist</key>
@@ -396,28 +396,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WV2Kd2D6gCd7aIfg/LhQrISa8tjObDHXn/W+uPaxt8w=
+			s1itcFRSu+yiu07/7EZLLYZjlIlwKJaSioe2M2hI44k=
 			</data>
 		</dict>
 		<key>SideMenuViewController.storyboardc/SideMenuTableViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3Qw8WQxvTZ+hXXU6x+o+gnAFcujDAkbKW/fz3klB7+k=
+			2RwVh7tQbqi4nvFvpQ51duFCAlKWVWA9Ckp94DFu6fQ=
 			</data>
 		</dict>
 		<key>SideMenuViewController.storyboardc/SideMenuViewController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iK1wcnCJhmZOHMTOMfQZp1mvqG1X3sMyEDzcwczGXMA=
+			f7jfTVmtM7yaC6ZK4SwQbzRVIyE4JB0RzfKpcLtfBUw=
 			</data>
 		</dict>
 		<key>SideMenuViewController.storyboardc/UINavigationController-IZY-qx-W6j.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yMRADmJnXZS7yJaT4y3a6y1tDh60GfxQEb6RMh2opEs=
+			RwvY/e+ngThH8E0ywfuOAJUP5F0HgcGMVAXDPLsunUo=
 			</data>
 		</dict>
 		<key>bird.mp3</key>
