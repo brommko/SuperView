@@ -1,6 +1,6 @@
-name: Example
+name: App
 targets:
-  Example:
+  App:
     type: application
     platform: iOS
     deploymentTarget: 12.0
