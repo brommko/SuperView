@@ -13,9 +13,9 @@
 		<key>backgroundColor</key>
 		<string></string>
 		<key>useTopSafeArea</key>
-		<false/>
+		<true/>
 		<key>useBottomSafeArea</key>
-		<false/>
+		<true/>
 		<key>url</key>
 		<string></string>
 		<key>customUserAgent</key>
@@ -100,22 +100,22 @@
 		<key>isEnabled</key>
 		<true/>
 		<key>appId</key>
-		<string>ec291a7f-c387-4c06-a37e-34b0b24d97bf</string>
+		<string></string>
 		<key>restApiKey</key>
-		<string>MWI3MTE5NjUtYzk0ZS00YWVhLWE0ODYtY2U2ODAyZWQ0YTdl</string>
+		<string></string>
 	</dict>
 	<key>adMob</key>
 	<dict>
 		<key>isEnabled</key>
-		<true/>
+		<false/>
 		<key>appId</key>
-		<string>ca-app-pub-3381628848661821~3943774839</string>
+		<string></string>
 		<key>bannerUnitID</key>
-		<string>ca-app-pub-3381628848661821/5420508039</string>
+		<string></string>
 		<key>interstitialUnitID</key>
-		<string>ca-app-pub-3381628848661821/6897241230</string>
+		<string></string>
 		<key>rewardedUnitID</key>
-		<string>ca-app-pub-3381628848661821/2000944248</string>
+		<string></string>
 	</dict>
 	<key>rateMyApp</key>
 	<dict>
@@ -127,7 +127,7 @@
 	<key>font</key>
 	<dict>
 		<key>name</key>
-		<string>Cabin-Regular</string>
+		<string>Roboto-Regular</string>
 		<key>size</key>
 		<integer>16</integer>
 	</dict>
@@ -158,9 +158,9 @@
 	<key>inAppPurchase</key>
 	<dict>
 		<key>isEnabled</key>
-		<true/>
+		<false/>
 		<key>productId</key>
-		<string>com.brommko.universalwebview.removeads</string>
+		<string></string>
 	</dict>
 	<key>facebook</key>
 	<dict>

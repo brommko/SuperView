@@ -181,7 +181,8 @@ public struct WebViewOptions : Swift.Codable {
   public var externalLinks: [Swift.String]
   public var customURLSchemes: [Swift.String]
   public var backgroundColor: Swift.String
-  public init(url: Swift.String? = nil, isRTL: Swift.Bool? = false, customUserAgent: Swift.String? = nil, userScript: Swift.String? = nil, allowPullToRefresh: Swift.Bool? = true, allowBounce: Swift.Bool? = true, allowVideoPlayInline: Swift.Bool? = true, allowLinkPreview: Swift.Bool? = true, allowBackForwardSwipe: Swift.Bool? = true, allowCache: Swift.Bool? = true, allowZoom: Swift.Bool? = true, allowPictureInPicture: Swift.Bool? = true, waitUntilLoaded: Swift.Bool? = true, useTopSafeArea: Swift.Bool? = false, useBottomSafeArea: Swift.Bool? = false, openAllExternalLinks: Swift.Bool? = false, externalLinks: [Swift.String]? = [], customURLSchemes: [Swift.String]? = [], backgroundColor: Swift.String? = nil)
+  public var mediaTypesRequiringUserActionForPlayback: Swift.Int
+  public init(url: Swift.String? = nil, isRTL: Swift.Bool? = false, customUserAgent: Swift.String? = nil, userScript: Swift.String? = nil, allowPullToRefresh: Swift.Bool? = true, allowBounce: Swift.Bool? = true, allowVideoPlayInline: Swift.Bool? = true, allowLinkPreview: Swift.Bool? = true, allowBackForwardSwipe: Swift.Bool? = true, allowCache: Swift.Bool? = true, allowZoom: Swift.Bool? = true, allowPictureInPicture: Swift.Bool? = true, waitUntilLoaded: Swift.Bool? = true, useTopSafeArea: Swift.Bool? = false, useBottomSafeArea: Swift.Bool? = false, openAllExternalLinks: Swift.Bool? = false, externalLinks: [Swift.String]? = [], customURLSchemes: [Swift.String]? = [], backgroundColor: Swift.String? = nil, mediaTypesRequiringUserActionForPlayback: Swift.Int? = 3)
   public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
 }

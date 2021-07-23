@@ -5,10 +5,6 @@ install! 'cocoapods', :deterministic_uuids => false
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'App' do
-  pod "SuperView/Core", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.9'
-  pod "SuperView/OneSignal", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.9'
-  pod "SuperView/AdMob", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.9'
-  pod "SuperView/Firebase", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.9'
-  pod "SuperView/QR", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.9'
-  pod "SuperView/Location", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.9'
+  pod "SuperView/Core", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.10'
+  pod "SuperView/OneSignal", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.2.10'
 end
