@@ -4,9 +4,9 @@
 import AVFoundation
 import Foundation
 import GCDWebServer
+import Network
 import PDFKit
 import QuartzCore
-import Reachability
 import SafariServices
 import StoreKit
 @_exported import SuperViewCore
