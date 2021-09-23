@@ -612,6 +612,7 @@ SWIFT_CLASS("_TtC13SuperViewCore22SuperWebViewController")
 
 
 
+
 @protocol UIViewControllerPreviewing;
 
 @interface SuperWebViewController (SWIFT_EXTENSION(SuperViewCore)) <UIViewControllerPreviewingDelegate>
@@ -1281,6 +1282,7 @@ SWIFT_CLASS("_TtC13SuperViewCore22SuperWebViewController")
 @interface SuperWebViewController (SWIFT_EXTENSION(SuperViewCore))
 - (void)scrollViewWillBeginZooming:(UIScrollView * _Nonnull)scrollView withView:(UIView * _Nullable)view;
 @end
+
 
 
 
