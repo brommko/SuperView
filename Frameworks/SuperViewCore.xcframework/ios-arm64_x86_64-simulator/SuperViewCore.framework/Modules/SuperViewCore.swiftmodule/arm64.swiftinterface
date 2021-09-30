@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
-// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SuperViewCore
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-module-flags: -target arm64-apple-ios12.1-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SuperViewCore
 import AVFoundation
 import Foundation
 import GCDWebServer
@@ -20,8 +20,8 @@ import WebKit
 }
 @objc public enum NavigationBarState : Swift.Int {
   case collapsed, expanded, scrolling
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -29,8 +29,8 @@ import WebKit
 @objc public enum NavigationBarCollapseDirection : Swift.Int {
   case scrollUp = -1
   case scrollDown = 1
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -38,8 +38,8 @@ import WebKit
 @objc public enum NavigationBarFollowerCollapseDirection : Swift.Int {
   case scrollUp = -1
   case scrollDown = 1
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -48,8 +48,8 @@ import WebKit
   @objc weak public var view: UIKit.UIView?
   @objc public var direction: SuperViewCore.NavigationBarFollowerCollapseDirection
   @objc public init(view: UIKit.UIView, direction: SuperViewCore.NavigationBarFollowerCollapseDirection = .scrollUp)
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @objcMembers open class ScrollingNavigationController : UIKit.UINavigationController, UIKit.UIGestureRecognizerDelegate {
   @objc open var state: SuperViewCore.NavigationBarState {
@@ -99,10 +99,10 @@ public struct SideMenuEnums {
     case left
     case right
     public static func == (a: SuperViewCore.SideMenuEnums.Position, b: SuperViewCore.SideMenuEnums.Position) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
-    public func hash(into hasher: inout Swift.Hasher)
   }
 }
 public struct FreshchatOptions : Swift.Codable {
@@ -178,11 +178,12 @@ public struct WebViewOptions : Swift.Codable {
   public var useTopSafeArea: Swift.Bool
   public var useBottomSafeArea: Swift.Bool
   public var openAllExternalLinks: Swift.Bool
+  public var useWindowOpen: Swift.Bool
   public var externalLinks: [Swift.String]
   public var customURLSchemes: [Swift.String]
   public var backgroundColor: Swift.String
   public var mediaTypesRequiringUserActionForPlayback: Swift.Int
-  public init(url: Swift.String? = nil, isRTL: Swift.Bool? = false, customUserAgent: Swift.String? = nil, userScript: Swift.String? = nil, allowPullToRefresh: Swift.Bool? = true, allowBounce: Swift.Bool? = true, allowVideoPlayInline: Swift.Bool? = true, allowLinkPreview: Swift.Bool? = true, allowBackForwardSwipe: Swift.Bool? = true, allowCache: Swift.Bool? = true, allowZoom: Swift.Bool? = true, allowPictureInPicture: Swift.Bool? = true, waitUntilLoaded: Swift.Bool? = true, useTopSafeArea: Swift.Bool? = false, useBottomSafeArea: Swift.Bool? = false, openAllExternalLinks: Swift.Bool? = false, externalLinks: [Swift.String]? = [], customURLSchemes: [Swift.String]? = [], backgroundColor: Swift.String? = nil, mediaTypesRequiringUserActionForPlayback: Swift.Int? = 3)
+  public init(url: Swift.String? = nil, isRTL: Swift.Bool? = false, customUserAgent: Swift.String? = nil, userScript: Swift.String? = nil, allowPullToRefresh: Swift.Bool? = true, allowBounce: Swift.Bool? = true, allowVideoPlayInline: Swift.Bool? = true, allowLinkPreview: Swift.Bool? = true, allowBackForwardSwipe: Swift.Bool? = true, allowCache: Swift.Bool? = true, allowZoom: Swift.Bool? = true, allowPictureInPicture: Swift.Bool? = true, waitUntilLoaded: Swift.Bool? = true, useTopSafeArea: Swift.Bool? = false, useBottomSafeArea: Swift.Bool? = false, openAllExternalLinks: Swift.Bool? = false, externalLinks: [Swift.String]? = [], useWindowOpen: Swift.Bool = true, customURLSchemes: [Swift.String]? = [], backgroundColor: Swift.String? = nil, mediaTypesRequiringUserActionForPlayback: Swift.Int? = 3)
   public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
 }
@@ -232,8 +233,8 @@ public enum RestMethod : Swift.String {
   case post
   case put
   case delete
-  public typealias RawValue = Swift.String
   public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
@@ -241,8 +242,8 @@ public enum RestMethod : Swift.String {
 public enum Endpoint : Swift.String {
   case oneSignal
   case envatoSale
-  public typealias RawValue = Swift.String
   public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
@@ -435,10 +436,10 @@ public enum SuperWebViewEvent {
   case startActivityIndicator
   case stopActivityIndicator
   public static func == (a: SuperViewCore.SuperWebViewEvent, b: SuperViewCore.SuperWebViewEvent) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
 }
 public protocol SuperWebViewDelegate : AnyObject {
   func superWebView(_ event: SuperViewCore.SuperWebViewEvent)
@@ -624,8 +625,8 @@ public enum NVActivityIndicatorType : Swift.Int {
   case orbit
   case audioEqualizer
   case circleStrokeSpin
-  public typealias RawValue = Swift.Int
   public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
@@ -680,9 +681,9 @@ public typealias FadeOutAnimation = (UIKit.UIView, @escaping () -> Swift.Void) -
   public func showMenu()
   public func hideMenu()
   @objc public func dismissSideMenuViewController()
-  @objc deinit
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
 }
 extension SuperViewCore.NavigationBarState : Swift.Equatable {}
 extension SuperViewCore.NavigationBarState : Swift.Hashable {}
