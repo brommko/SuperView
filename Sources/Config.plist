@@ -135,6 +135,8 @@
 	<dict>
 		<key>isEnabled</key>
 		<true/>
+		<key>permissionOnLaunch</key>
+		<true/>
 		<key>willRequestAlways</key>
 		<false/>
 	</dict>

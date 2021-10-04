@@ -144,6 +144,10 @@
     function rateApp() {
         window.bridge.post('rate_app', {})
     }
+        
+    function getLocationPermission() {
+        window.bridge.post('get_location_permission', {})
+    }
 
     function getCurrentGPSLocation() {
         window.bridge.post('current_gps_location', {}, (results, error) => {
@@ -498,6 +502,18 @@
                             <p id="firebase_token"></p>
                             <div class="read-more">
                                 <a class="btn btn-primary" onClick="getFirebaseToken()">Get Firebase Token</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-16">
+                    <div class="card">
+                        <div class="card-block">
+                            <h4 class="card-title">Location permission</h4>
+                            <p id="current_gps_permission"></p>
+                            <div class="read-more">
+                                <a id="get_gps_token" class="btn btn-primary" onClick="getLocationPermission()">Get location permission</a>
                             </div>
                         </div>
                     </div>

@@ -86,7 +86,8 @@ import WebKit
 public struct GPSOptions : Swift.Codable {
   public var isEnabled: Swift.Bool
   public var willRequestAlways: Swift.Bool
-  public init(isEnabled: Swift.Bool? = nil, willRequestAlways: Swift.Bool? = nil)
+  public var permissionOnLaunch: Swift.Bool
+  public init(isEnabled: Swift.Bool? = nil, willRequestAlways: Swift.Bool? = nil, permissionOnLaunch: Swift.Bool? = nil)
   public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
 }
