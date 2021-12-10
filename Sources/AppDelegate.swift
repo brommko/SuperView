@@ -1,12 +1,15 @@
 //
 //  AppDelegate.swift
-//  
+//  SuperViewExample
 //
 //  Created by Brommko LLC on 09/10/2018.
 //
 
 import UIKit
+
+#if canImport(SuperViewCore)
 import SuperViewCore
+#endif
 
 #if canImport(SuperViewAdMob)
 import SuperViewAdMob
@@ -14,10 +17,6 @@ import SuperViewAdMob
 
 #if canImport(SuperViewCardScan)
 import SuperViewCardScan
-#endif
-
-#if canImport(SuperViewCardIO)
-import SuperViewCardIO
 #endif
 
 #if canImport(SuperViewFacebook)
@@ -40,65 +39,52 @@ import SuperViewQR
 import SuperViewFirebase
 #endif
 
-#if canImport(SuperViewFreshchat)
-import SuperViewFreshchat
-#endif
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         SuperView.configure(application: application, launchOptions: launchOptions)
         
-        if #available(iOS 13, *) {
-            #if canImport(SuperViewAdMob)
-            SuperView.configureAdMob()
-            #endif
-            
-            #if canImport(SuperViewCardIO)
-            SuperView.configureCardIO()
-            #endif
-            
-            #if canImport(SuperViewCardScan)
-            SuperView.configureCardScan()
-            #endif
-            
-            #if canImport(SuperViewFacebook)
-            SuperView.configureFacebook()
-            #endif
-            
-            #if canImport(SuperViewFirebase)
-            SuperView.configureFirebase()
-            #endif
-            
-            #if canImport(SuperViewLocation)
-            SuperView.configureLocation()
-            #endif
-            
-            #if canImport(SuperViewOneSignal)
-            SuperView.configureOneSignal()
-            #endif
-            
-            #if canImport(SuperViewQR)
-            SuperView.configureQR()
-            #endif
-            
-            #if canImport(SuperViewFreshchat)
-            SuperView.configureFreshchat()
-            #endif
-        }
+        #if canImport(SuperViewAdMob)
+        SuperView.configureAdMob()
+        #endif
+
+        #if canImport(SuperViewCardScan)
+        SuperView.configureCardScan()
+        #endif
+
+        #if canImport(SuperViewFacebook)
+        SuperView.configureFacebook()
+        #endif
+
+        #if canImport(SuperViewFirebase)
+        SuperView.configureFirebase()
+        #endif
+
+        #if canImport(SuperViewLocation)
+        SuperView.configureLocation()
+        #endif
+
+        #if canImport(SuperViewOneSignal)
+        SuperView.configureOneSignal()
+        #endif
+
+        #if canImport(SuperViewQR)
+        SuperView.configureQR()
+        #endif
+        
         return true
     }
-
+    
     func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
         return SuperView.handleURL(url: url, options: options)
     }
-
+    
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-
+        
         guard userActivity.activityType == NSUserActivityTypeBrowsingWeb, let url = userActivity.webpageURL else {
             return false
         }

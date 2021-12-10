@@ -1,15 +1,31 @@
 name: App
+settingGroups:
+  commonBuildSettings:
+    SWIFT_VERSION: 5
+    CURRENT_PROJECT_VERSION: 1
+    IPHONEOS_DEPLOYMENT_TARGET: 13.0
+    SWIFT_OPTIMIZATION_LEVEL: -Onone
+    TARGETED_DEVICE_FAMILY: '1'
+    ENABLE_BITCODE: NO
+    BUILD_LIBRARIES_FOR_DISTRIBUTION: YES
+    CODE_SIGN_IDENTITY: "iPhone Developer"
+    DEBUG_INFORMATION_FORMAT: dwarf-with-dsym
 targets:
   App:
     type: application
     platform: iOS
-    deploymentTarget: 12.0
+    deploymentTarget: 13.0
     sources:
       - path: Sources
 #      - path: www
 #        type: folder
+    entitlements: 
+      path: App.entitlements
+      properties:
+        aps-environment: development
     settings:
-      INFOPLIST_FILE: Sources/Info.plist
-      PRODUCT_BUNDLE_IDENTIFIER: com.bommko.UniversalWebView
-      ENABLE_BITCODE: NO
-      CURRENT_PROJECT_VERSION: 1
+      base:
+        INFOPLIST_FILE: Sources/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.bommko.UniversalWebView
+      groups:
+        - commonBuildSettings
