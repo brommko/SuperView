@@ -1,0 +1,612 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SuperViewCore
+import AVFoundation
+import Foundation
+import Network
+import PDFKit
+import QuartzCore
+import SafariServices
+import StoreKit
+@_exported import SuperViewCore
+import Swift
+import UIKit
+import UserNotifications
+import WebKit
+import _Concurrency
+public struct GPSOptions : Swift.Codable {
+  public var isEnabled: Swift.Bool
+  public var willRequestAlways: Swift.Bool
+  public var permissionOnLaunch: Swift.Bool
+  public init(isEnabled: Swift.Bool? = nil, willRequestAlways: Swift.Bool? = nil, permissionOnLaunch: Swift.Bool? = nil)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@_hasMissingDesignatedInitializers public class MethodSwizzler {
+  public static func swizzleMethods(cls: Swift.AnyClass, originalSelector: ObjectiveC.Selector, overrideSelector: ObjectiveC.Selector)
+  @objc deinit
+}
+public struct SideMenuEnums {
+  public enum Position {
+    case left
+    case right
+    public static func == (a: SuperViewCore.SideMenuEnums.Position, b: SuperViewCore.SideMenuEnums.Position) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public struct CustomFontOptions : Swift.Codable {
+  public var name: Swift.String?
+  public var size: Swift.Float?
+  public init(name: Swift.String? = nil, size: Swift.Float? = 15)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum SuperToolbarEvent {
+  case goBack
+  case goForward
+  case purchase
+  case reload
+  case goTo(url: Swift.String)
+}
+@objc @_inheritsConvenienceInitializers @objcMembers @_Concurrency.MainActor(unsafe) open class SuperToolbar : UIKit.UIToolbar {
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+final public class ActivityData {
+  public init(size: CoreGraphics.CGSize? = nil, message: Swift.String? = nil, messageFont: UIKit.UIFont? = nil, messageSpacing: CoreGraphics.CGFloat? = nil, type: SuperViewCore.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreGraphics.CGFloat? = nil, displayTimeThreshold: Swift.Int? = nil, minimumDisplayTime: Swift.Int? = nil, backgroundColor: UIKit.UIColor? = nil, textColor: UIKit.UIColor? = nil)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class NVActivityIndicatorPresenter {
+  public static let sharedInstance: SuperViewCore.NVActivityIndicatorPresenter
+  final public var isAnimating: Swift.Bool {
+    get
+  }
+  final public func startAnimating(_ data: SuperViewCore.ActivityData, _ fadeInAnimation: SuperViewCore.FadeInAnimation?)
+  final public func stopAnimating(_ fadeOutAnimation: SuperViewCore.FadeOutAnimation?)
+  final public func setMessage(_ message: Swift.String?)
+  @objc deinit
+}
+public struct ActivityIndicatorOptions : Swift.Codable {
+  public var isEnabled: Swift.Bool
+  public var splashProgress: Swift.Bool
+  public var splashContentMode: Swift.Int
+  public var message: Swift.String
+  public var type: Swift.Int
+  public init(isEnabled: Swift.Bool? = nil, splashProgress: Swift.Bool? = nil, splashContentMode: Swift.Int? = nil, message: Swift.String? = nil, type: Swift.Int? = nil)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension Foundation.NSNotification.Name {
+  public static let superViewOpenURL: Foundation.NSNotification.Name
+}
+public struct WebViewOptions : Swift.Codable {
+  public var url: Swift.String?
+  public var isRTL: Swift.Bool
+  public var allowPullToRefresh: Swift.Bool
+  public var allowBounce: Swift.Bool
+  public var customUserAgent: Swift.String
+  public var userScript: Swift.String
+  public var allowVideoPlayInline: Swift.Bool
+  public var allowLinkPreview: Swift.Bool
+  public var allowBackForwardSwipe: Swift.Bool
+  public var allowCache: Swift.Bool
+  public var allowZoom: Swift.Bool
+  public var allowPictureInPicture: Swift.Bool
+  public var waitUntilLoaded: Swift.Bool
+  public var useTopSafeArea: Swift.Bool
+  public var useBottomSafeArea: Swift.Bool
+  public var openAllExternalLinks: Swift.Bool
+  public var useWindowOpen: Swift.Bool
+  public var externalLinks: [Swift.String]
+  public var customURLSchemes: [Swift.String]
+  public var mediaTypesRequiringUserActionForPlayback: Swift.Int
+  public init(url: Swift.String? = nil, isRTL: Swift.Bool? = false, customUserAgent: Swift.String? = nil, userScript: Swift.String? = nil, allowPullToRefresh: Swift.Bool? = true, allowBounce: Swift.Bool? = true, allowVideoPlayInline: Swift.Bool? = true, allowLinkPreview: Swift.Bool? = true, allowBackForwardSwipe: Swift.Bool? = true, allowCache: Swift.Bool? = true, allowZoom: Swift.Bool? = true, allowPictureInPicture: Swift.Bool? = true, waitUntilLoaded: Swift.Bool? = true, useTopSafeArea: Swift.Bool? = false, useBottomSafeArea: Swift.Bool? = false, openAllExternalLinks: Swift.Bool? = false, externalLinks: [Swift.String]? = [], useWindowOpen: Swift.Bool = true, customURLSchemes: [Swift.String]? = [], mediaTypesRequiringUserActionForPlayback: Swift.Int? = 3)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@objc @_inheritsConvenienceInitializers @objcMembers @_Concurrency.MainActor(unsafe) open class SuperWebView : WebKit.WKWebView {
+  @_Concurrency.MainActor(unsafe) weak public var delegate: SuperViewCore.SuperWebViewDelegate?
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect, configuration: WebKit.WKWebViewConfiguration)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension SuperViewCore.SuperWebView {
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func setupBridge()
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func setupLocation()
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func setupLocationBridge()
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func setupAdMobBridge()
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func setupOneSignalBridge()
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func setupCardScanBridge()
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func setupFacebookBridge()
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func setupQRBridge()
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func setupFirebaseBridge()
+}
+extension SuperViewCore.SuperWebView : WebKit.WKUIDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, createWebViewWith configuration: WebKit.WKWebViewConfiguration, for navigationAction: WebKit.WKNavigationAction, windowFeatures: WebKit.WKWindowFeatures) -> WebKit.WKWebView?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webViewDidClose(_ webView: WebKit.WKWebView)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptAlertPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptConfirmPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.Bool) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, runJavaScriptTextInputPanelWithPrompt prompt: Swift.String, defaultText: Swift.String?, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping (Swift.String?) -> Swift.Void)
+}
+extension SuperViewCore.SuperWebView : WebKit.WKURLSchemeHandler {
+  @available(iOS 11.0, *)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, start urlSchemeTask: WebKit.WKURLSchemeTask)
+  @available(iOS 11.0, *)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, stop urlSchemeTask: WebKit.WKURLSchemeTask)
+}
+extension SuperViewCore.SuperWebView : WebKit.WKNavigationDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationResponse: WebKit.WKNavigationResponse, decisionHandler: @escaping (WebKit.WKNavigationResponsePolicy) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: Swift.Error)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: Swift.Error)
+}
+public enum RestMethod : Swift.String {
+  case get
+  case post
+  case put
+  case delete
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum Endpoint : Swift.String {
+  case oneSignal
+  case envatoSale
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class NetworkManager {
+  public init(endpoint: SuperViewCore.Endpoint)
+  @objc deinit
+}
+extension SuperViewCore.NetworkManager {
+  public typealias CompletionBlock<D> = ((D?, Swift.Error?) -> Swift.Void) where D : Swift.Decodable
+  public func get<D>(endpoint: Swift.String, responseType: D.Type, params: [Swift.String : Swift.String]? = nil, headers: [Swift.String : Swift.String]? = nil, completion: @escaping SuperViewCore.NetworkManager.CompletionBlock<D>) where D : Swift.Decodable
+  public func post<E, D>(endpoint: Swift.String, responseType: D.Type, payload: E?, params: [Swift.String : Swift.String]? = nil, headers: [Swift.String : Swift.String]? = nil, completion: @escaping SuperViewCore.NetworkManager.CompletionBlock<D>) where E : Swift.Encodable, D : Swift.Decodable
+  public func put<E, D>(endpoint: Swift.String, responseType: D.Type, payload: E?, params: [Swift.String : Swift.String]? = nil, headers: [Swift.String : Swift.String]? = nil, completion: @escaping SuperViewCore.NetworkManager.CompletionBlock<D>) where E : Swift.Encodable, D : Swift.Decodable
+  public func delete<E, D>(endpoint: Swift.String, responseType: D.Type, payload: E?, params: [Swift.String : Swift.String]? = nil, headers: [Swift.String : Swift.String]? = nil, completion: @escaping SuperViewCore.NetworkManager.CompletionBlock<D>) where E : Swift.Encodable, D : Swift.Decodable
+}
+@objc @_inheritsConvenienceInitializers @objcMembers @_Concurrency.MainActor(unsafe) open class SuperWebViewController : UIKit.UIViewController, SuperViewCore.NVActivityIndicatorViewable {
+  @objc @_Concurrency.MainActor(unsafe) open var webView: SuperViewCore.SuperWebView!
+  @objc @_Concurrency.MainActor(unsafe) open var toolbar: SuperViewCore.SuperToolbar!
+  @objc @_Concurrency.MainActor(unsafe) open var bannerView: UIKit.UIView!
+  @objc @_Concurrency.MainActor(unsafe) open var interstitial: ObjectiveC.NSObject!
+  @objc @_Concurrency.MainActor(unsafe) open var rewardedAd: ObjectiveC.NSObject!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension SuperViewCore.SuperWebViewController : WebKit.WKNavigationDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationResponse: WebKit.WKNavigationResponse, decisionHandler: @escaping (WebKit.WKNavigationResponsePolicy) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: Swift.Error)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: Swift.Error)
+}
+extension SuperViewCore.SuperWebViewController : SuperViewCore.SuperToolbarDelegate {
+  @_Concurrency.MainActor(unsafe) public func superToolbar(_ event: SuperViewCore.SuperToolbarEvent)
+}
+extension SuperViewCore.SuperWebViewController : SuperViewCore.SuperWebViewDelegate {
+  @_Concurrency.MainActor(unsafe) public func superWebView(_ event: SuperViewCore.SuperWebViewEvent)
+}
+extension SuperViewCore.SuperWebViewController {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func setupAds()
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func setupFacebookAds()
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func presentInterstitialAd()
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func presentRewardBasedVideoAd()
+}
+extension SuperViewCore.SuperWebViewController : UIKit.UIContextMenuInteractionDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func contextMenuInteraction(_ interaction: UIKit.UIContextMenuInteraction, configurationForMenuAtLocation location: CoreGraphics.CGPoint) -> UIKit.UIContextMenuConfiguration?
+}
+extension SuperViewCore.SuperWebViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var preferredStatusBarStyle: UIKit.UIStatusBarStyle {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var prefersStatusBarHidden: Swift.Bool {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var preferredStatusBarUpdateAnimation: UIKit.UIStatusBarAnimation {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+}
+public struct SideMenuOptions : Swift.Codable {
+  public var isEnabled: Swift.Bool
+  public var items: [SuperViewCore.CustomButton]?
+  public init(isEnabled: Swift.Bool? = false, backgroundColor: Swift.String? = nil, buttonColor: Swift.String? = nil, items: Swift.String? = nil)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct InAppPurchaseOptions : Swift.Codable {
+  public var isEnabled: Swift.Bool
+  public var productId: Swift.String?
+  public init(isEnabled: Swift.Bool? = false, productId: Swift.String? = nil)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct SuperViewOptions : Swift.Codable {
+  public var purchaseCode: Swift.String?
+  public var activityIndicator: SuperViewCore.ActivityIndicatorOptions!
+  public var adMob: SuperViewCore.AdMobOptions!
+  public var facebook: SuperViewCore.FacebookOptions!
+  public var font: SuperViewCore.CustomFontOptions!
+  public var gps: SuperViewCore.GPSOptions!
+  public var inAppPurchase: SuperViewCore.InAppPurchaseOptions!
+  public var navigationBar: SuperViewCore.NavigationBarOptions!
+  public var oneSignal: SuperViewCore.OneSignalOptions!
+  public var rateMyApp: SuperViewCore.RateMyAppOptions!
+  public var sideMenu: SuperViewCore.SideMenuOptions!
+  public var toolbar: SuperViewCore.ToolbarOptions!
+  public var webView: SuperViewCore.WebViewOptions!
+  public init(purchaseCode: Swift.String? = nil, activityIndicator: SuperViewCore.ActivityIndicatorOptions = ActivityIndicatorOptions(), adMob: SuperViewCore.AdMobOptions = AdMobOptions(), facebook: SuperViewCore.FacebookOptions = FacebookOptions(), font: SuperViewCore.CustomFontOptions = CustomFontOptions(), gps: SuperViewCore.GPSOptions = GPSOptions(), inAppPurchase: SuperViewCore.InAppPurchaseOptions = InAppPurchaseOptions(), navigationBar: SuperViewCore.NavigationBarOptions = NavigationBarOptions(), oneSignal: SuperViewCore.OneSignalOptions = OneSignalOptions(), rateMyApp: SuperViewCore.RateMyAppOptions = RateMyAppOptions(), sideMenu: SuperViewCore.SideMenuOptions = SideMenuOptions(), toolbar: SuperViewCore.ToolbarOptions = ToolbarOptions(), webView: SuperViewCore.WebViewOptions = WebViewOptions())
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct RateMyAppOptions : Swift.Codable {
+  public static let promptForReviewCounter: Swift.Int
+  public var isEnabled: Swift.Bool
+  public var promptForReviewCounter: Swift.Int
+  public init(isEnabled: Swift.Bool? = true, appleID: Swift.String? = nil, promptForReviewCounter: Swift.Int? = nil)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func fadeIn(duration: Foundation.TimeInterval = 0.5, delay: Foundation.TimeInterval = 0.0, completion: @escaping ((Swift.Bool) -> Swift.Void) = { (finished: Bool) -> Void in })
+  @_Concurrency.MainActor(unsafe) public func fadeOut(duration: Foundation.TimeInterval = 0.5, delay: Foundation.TimeInterval = 0.0, completion: @escaping (Swift.Bool) -> Swift.Void = { (finished: Bool) -> Void in })
+  @_Concurrency.MainActor(unsafe) public func anckorToSuperView()
+  @_Concurrency.MainActor(unsafe) public func anchor(top: UIKit.NSLayoutYAxisAnchor?, leading: UIKit.NSLayoutXAxisAnchor?, trailing: UIKit.NSLayoutXAxisAnchor?, bottom: UIKit.NSLayoutYAxisAnchor?, padding: UIKit.UIEdgeInsets = .zero, size: CoreGraphics.CGSize = .zero)
+}
+public struct NavigationBarOptions : Swift.Codable {
+  public var isEnabled: Swift.Bool
+  public var enableProgress: Swift.Bool
+  public var isStatusBarLight: Swift.Bool
+  public var rightButton: SuperViewCore.CustomButton?
+  public init(isEnabled: Swift.Bool? = nil, enableProgress: Swift.Bool? = true, isStatusBarLight: Swift.Bool? = true, rightButton: Swift.String? = nil)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@objc @_hasMissingDesignatedInitializers open class Bridge : ObjectiveC.NSObject {
+  public struct JSError {
+    public let code: Swift.Int
+    public let description: Swift.String
+    public init(code: Swift.Int, description: Swift.String)
+  }
+  public enum Results {
+    case success([Swift.String : Any]?)
+    case failure(SuperViewCore.Bridge.JSError)
+  }
+  public typealias Callback = (_ results: SuperViewCore.Bridge.Results) -> Swift.Void
+  public typealias Handler = (_ parameters: [Swift.String : Any]?, _ callback: (_ results: SuperViewCore.Bridge.Results) -> Swift.Void) -> Swift.Void
+  public typealias DefaultHandler = (_ name: Swift.String, _ parameters: [Swift.String : Any]?, _ callback: (_ results: SuperViewCore.Bridge.Results) -> Swift.Void) -> Swift.Void
+  public var defaultHandler: SuperViewCore.Bridge.DefaultHandler?
+  public var printScriptMessageAutomatically: Swift.Bool
+  @objc deinit
+  public func register(_ handler: @escaping SuperViewCore.Bridge.Handler, for action: Swift.String)
+  public func unregister(for action: Swift.String)
+  public func post(action: Swift.String, parameters: [Swift.String : Any]?)
+  public func evaluate(_ javaScriptString: Swift.String, completion: ((Any?, Swift.Error?) -> Swift.Void)? = nil)
+}
+extension SuperViewCore.Bridge : WebKit.WKScriptMessageHandler {
+  @objc dynamic public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+}
+extension WebKit.WKWebView {
+  @_Concurrency.MainActor(unsafe) public var bridge: SuperViewCore.Bridge {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public func removeBridge()
+}
+extension UIKit.UIApplication {
+  @_Concurrency.MainActor(unsafe) public func topViewController() -> UIKit.UIViewController?
+}
+public struct ToolbarOptions : Swift.Codable {
+  public var isEnabled: Swift.Bool
+  public var backgroundColor: Swift.String
+  public var buttonColor: Swift.String
+  public var customButtons: [SuperViewCore.CustomButton]?
+  public init(isEnabled: Swift.Bool = true, backgroundColor: Swift.String? = nil, buttonColor: Swift.String? = nil, customButtons: Swift.String? = nil)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension Swift.String {
+  public func url() -> Foundation.URL?
+}
+extension UIKit.UINavigationController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var preferredStatusBarStyle: UIKit.UIStatusBarStyle {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+}
+public struct OneSignalOptions : Swift.Codable {
+  public var isEnabled: Swift.Bool
+  public var appId: Swift.String?
+  public var restApiKey: Swift.String?
+  public init(isEnabled: Swift.Bool? = false, appId: Swift.String? = nil, restApiKey: Swift.String? = nil)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum SuperWebViewEvent {
+  case showInterstitialAd
+  case showRewardedAd
+  case startActivityIndicator
+  case stopActivityIndicator
+  public static func == (a: SuperViewCore.SuperWebViewEvent, b: SuperViewCore.SuperWebViewEvent) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol SuperWebViewDelegate : AnyObject {
+  func superWebView(_ event: SuperViewCore.SuperWebViewEvent)
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class SuperView : ObjectiveC.NSObject {
+  @objc public static let shared: SuperViewCore.SuperView
+  @objc public static let superViewLaunchURLKey: Swift.String
+  public var options: SuperViewCore.SuperViewOptions!
+  @objc public var application: UIKit.UIApplication!
+  @objc public var launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?
+  public static func configure(application: UIKit.UIApplication, launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?, useEnvironments: Swift.Bool?)
+  @objc public static func configure(application: UIKit.UIApplication, launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?, plistURL: Foundation.URL? = Bundle.main.url(forResource: "Config", withExtension: "plist"))
+  public static func configure(application: UIKit.UIApplication, launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?, options: SuperViewCore.SuperViewOptions)
+  @objc public static func show()
+  @objc @discardableResult
+  public static func handleURL(url: Foundation.URL, options: [UIKit.UIApplication.OpenURLOptionsKey : Any] = [:]) -> Swift.Bool
+  @objc public func handleFacebookURL(url: Foundation.URL, options: [UIKit.UIApplication.OpenURLOptionsKey : Any] = [:])
+  @objc public func openURL(url: Foundation.URL)
+  @objc public static var bundle: Foundation.Bundle {
+    @objc get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers @_Concurrency.MainActor(unsafe) public class SuperViewNavigationController : UIKit.UINavigationController {
+  @objc @_Concurrency.MainActor(unsafe) convenience public init(url: Swift.String)
+  @objc convenience dynamic public init()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var preferredStatusBarStyle: UIKit.UIStatusBarStyle {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @objc @_Concurrency.MainActor(unsafe) public func addDone()
+  @available(iOS 5.0, *)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(navigationBarClass: Swift.AnyClass?, toolbarClass: Swift.AnyClass?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(rootViewController: UIKit.UIViewController)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol SelfAdMobAware : AnyObject {
+  static func awake()
+}
+public protocol SelfCardIOAware : AnyObject {
+  static func awake()
+}
+public protocol SelfCardScanAware : AnyObject {
+  static func awake()
+}
+public protocol SelfFacebookAware : AnyObject {
+  static func awake()
+}
+public protocol SelfLocationAware : AnyObject {
+  static func awake()
+}
+public protocol SelfOneSignalAware : AnyObject {
+  static func awake()
+}
+public protocol SelfScanQrAware : AnyObject {
+  static func awake()
+}
+public protocol SelfFirebaseAware : AnyObject {
+  static func awake()
+}
+public protocol NVActivityIndicatorViewable {
+}
+extension SuperViewCore.NVActivityIndicatorViewable where Self : UIKit.UIViewController {
+  public var isAnimating: Swift.Bool {
+    get
+  }
+  public func startAnimating(_ size: CoreGraphics.CGSize? = nil, message: Swift.String? = nil, messageFont: UIKit.UIFont? = nil, type: SuperViewCore.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreGraphics.CGFloat? = nil, displayTimeThreshold: Swift.Int? = nil, minimumDisplayTime: Swift.Int? = nil, backgroundColor: UIKit.UIColor? = nil, textColor: UIKit.UIColor? = nil, fadeInAnimation: SuperViewCore.FadeInAnimation? = NVActivityIndicatorView.DEFAULT_FADE_IN_ANIMATION)
+  public func stopAnimating(_ fadeOutAnimation: SuperViewCore.FadeOutAnimation? = NVActivityIndicatorView.DEFAULT_FADE_OUT_ANIMATION)
+}
+extension UIKit.UIWindow {
+  @_Concurrency.MainActor(unsafe) public static var key: UIKit.UIWindow? {
+    get
+  }
+}
+public enum ThemeColorKey : Swift.String {
+  case activityIndicatorBackground
+  case activityIndicatorProgress
+  case navigationBarBackground
+  case navigationBarProgress
+  case navigationBarTitle
+  case sideMenuBackground
+  case sideMenuButton
+  case toolbarBackground
+  case toolbarButton
+  case webViewBackground
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension UIKit.UIColor {
+  convenience public init(_ name: SuperViewCore.ThemeColorKey)
+}
+extension UIKit.UIColor {
+  public static let activityIndicatorBackground: UIKit.UIColor
+  public static let activityIndicatorProgress: UIKit.UIColor
+  public static let navigationBarBackground: UIKit.UIColor
+  public static let navigationBarProgress: UIKit.UIColor
+  public static let navigationBarTitle: UIKit.UIColor
+  public static let sideMenuBackground: UIKit.UIColor
+  public static let sideMenuButton: UIKit.UIColor
+  public static let toolbarBackground: UIKit.UIColor
+  public static let toolbarButton: UIKit.UIColor
+  public static let webViewBackground: UIKit.UIColor
+}
+public struct AdMobOptions : Swift.Codable {
+  public var isEnabled: Swift.Bool
+  public var appId: Swift.String?
+  public var bannerUnitID: Swift.String?
+  public var interstitialUnitID: Swift.String?
+  public var rewardedUnitID: Swift.String?
+  public init(isEnabled: Swift.Bool? = false, appId: Swift.String? = nil, bannerUnitID: Swift.String? = nil, interstitialUnitID: Swift.String? = nil, rewardedUnitID: Swift.String? = nil)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public protocol SuperToolbarDelegate : AnyObject {
+  func superToolbar(_ event: SuperViewCore.SuperToolbarEvent)
+}
+extension Foundation.NSNotification.Name {
+  public static let IAPHelperPurchaseNotification: Foundation.Notification.Name
+}
+@objc @_hasMissingDesignatedInitializers open class IAPHelper : ObjectiveC.NSObject {
+  @objc deinit
+}
+extension SuperViewCore.IAPHelper {
+  public class func isRemoveAdsPurchased() -> Swift.Bool
+}
+extension SuperViewCore.IAPHelper : StoreKit.SKProductsRequestDelegate {
+  @objc dynamic public func productsRequest(_ request: StoreKit.SKProductsRequest, didReceive response: StoreKit.SKProductsResponse)
+  @objc dynamic public func request(_ request: StoreKit.SKRequest, didFailWithError error: Swift.Error)
+}
+extension SuperViewCore.IAPHelper : StoreKit.SKPaymentTransactionObserver {
+  @objc dynamic public func paymentQueue(_ queue: StoreKit.SKPaymentQueue, updatedTransactions transactions: [StoreKit.SKPaymentTransaction])
+}
+public struct CustomButton : Swift.Codable, Swift.Equatable {
+  public var title: Swift.String?
+  public var url: Swift.String?
+  public init(from decoder: Swift.Decoder) throws
+  public init(title: Swift.String, url: Swift.String?) throws
+  public static func == (a: SuperViewCore.CustomButton, b: SuperViewCore.CustomButton) -> Swift.Bool
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public struct FacebookOptions : Swift.Codable {
+  public var isEnabled: Swift.Bool
+  public var facebookID: Swift.String?
+  public var bannerPlacementID: Swift.String?
+  public var interstitialPlacementID: Swift.String?
+  public init(isEnabled: Swift.Bool? = false, facebookID: Swift.String? = nil, bannerPlacementID: Swift.String? = nil, interstitialPlacementID: Swift.String? = nil)
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum NVActivityIndicatorType : Swift.Int {
+  case blank
+  case ballPulse
+  case ballGridPulse
+  case ballClipRotate
+  case squareSpin
+  case ballClipRotatePulse
+  case ballClipRotateMultiple
+  case ballPulseRise
+  case ballRotate
+  case cubeTransition
+  case ballZigZag
+  case ballZigZagDeflect
+  case ballTrianglePath
+  case ballScale
+  case lineScale
+  case lineScaleParty
+  case ballScaleMultiple
+  case ballPulseSync
+  case ballBeat
+  case lineScalePulseOut
+  case lineScalePulseOutRapid
+  case ballScaleRipple
+  case ballScaleRippleMultiple
+  case ballSpinFadeLoader
+  case lineSpinFadeLoader
+  case triangleSkewSpin
+  case pacman
+  case ballGridBeat
+  case semiCircleSpin
+  case ballRotateChase
+  case orbit
+  case audioEqualizer
+  case circleStrokeSpin
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public typealias FadeInAnimation = (UIKit.UIView) -> Swift.Void
+public typealias FadeOutAnimation = (UIKit.UIView, @escaping () -> Swift.Void) -> Swift.Void
+@objc @_Concurrency.MainActor(unsafe) final public class NVActivityIndicatorView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_TYPE: SuperViewCore.NVActivityIndicatorType
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_COLOR: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_TEXT_COLOR: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_PADDING: CoreGraphics.CGFloat
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_SIZE: CoreGraphics.CGSize
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_DISPLAY_TIME_THRESHOLD: Swift.Int
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MINIMUM_DISPLAY_TIME: Swift.Int
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE: Swift.String?
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE_SPACING: CoreGraphics.CGFloat
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE_FONT: UIKit.UIFont
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_BACKGROUND_COLOR: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_FADE_IN_ANIMATION: (_ view: UIKit.UIView) -> Swift.Void
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_FADE_OUT_ANIMATION: (_ view: UIKit.UIView, _ complete: @escaping () -> Swift.Void) -> Swift.Void
+  @_Concurrency.MainActor(unsafe) final public var type: SuperViewCore.NVActivityIndicatorType
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public var color: UIKit.UIColor
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public var padding: CoreGraphics.CGFloat
+  @available(*, deprecated)
+  @_Concurrency.MainActor(unsafe) final public var animating: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) final public var isAnimating: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public init(frame: CoreGraphics.CGRect, type: SuperViewCore.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreGraphics.CGFloat? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override final public var intrinsicContentSize: CoreGraphics.CGSize {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override final public var bounds: CoreGraphics.CGRect {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @_Concurrency.MainActor(unsafe) final public func startAnimating()
+  @_Concurrency.MainActor(unsafe) final public func stopAnimating()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class SideMenuViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func prepare(for segue: UIKit.UIStoryboardSegue, sender: Any?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var preferredStatusBarStyle: UIKit.UIStatusBarStyle {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @_Concurrency.MainActor(unsafe) public func setViewController(_ selected: UIKit.UIViewController)
+  @_Concurrency.MainActor(unsafe) public func showMenu()
+  @_Concurrency.MainActor(unsafe) public func hideMenu()
+  @objc @_Concurrency.MainActor(unsafe) public func dismissSideMenuViewController()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension SuperViewCore.SideMenuEnums.Position : Swift.Equatable {}
+extension SuperViewCore.SideMenuEnums.Position : Swift.Hashable {}
+extension SuperViewCore.RestMethod : Swift.Equatable {}
+extension SuperViewCore.RestMethod : Swift.Hashable {}
+extension SuperViewCore.RestMethod : Swift.RawRepresentable {}
+extension SuperViewCore.Endpoint : Swift.Equatable {}
+extension SuperViewCore.Endpoint : Swift.Hashable {}
+extension SuperViewCore.Endpoint : Swift.RawRepresentable {}
+extension SuperViewCore.SuperWebViewEvent : Swift.Equatable {}
+extension SuperViewCore.SuperWebViewEvent : Swift.Hashable {}
+extension SuperViewCore.ThemeColorKey : Swift.Equatable {}
+extension SuperViewCore.ThemeColorKey : Swift.Hashable {}
+extension SuperViewCore.ThemeColorKey : Swift.RawRepresentable {}
+extension SuperViewCore.NVActivityIndicatorType : Swift.Equatable {}
+extension SuperViewCore.NVActivityIndicatorType : Swift.Hashable {}
+extension SuperViewCore.NVActivityIndicatorType : Swift.RawRepresentable {}

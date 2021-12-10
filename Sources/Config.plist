@@ -10,8 +10,6 @@
 		<string></string>
 		<key>isRTL</key>
 		<false/>
-		<key>backgroundColor</key>
-		<string></string>
 		<key>useTopSafeArea</key>
 		<true/>
 		<key>useBottomSafeArea</key>
@@ -21,7 +19,7 @@
 		<key>customUserAgent</key>
 		<string></string>
 		<key>waitUntilLoaded</key>
-		<false/>
+		<true/>
 		<key>allowPullToRefresh</key>
 		<true/>
 		<key>allowBounce</key>
@@ -32,6 +30,8 @@
 		<false/>
 		<key>allowVideoPlayInline</key>
 		<true/>
+		<key>mediaTypesRequiringUserActionForPlayback</key>
+		<integer>3</integer>
 		<key>allowLinkPreview</key>
 		<true/>
 		<key>allowBackForwardSwipe</key>
@@ -40,6 +40,8 @@
 		<true/>
 		<key>openAllExternalLinks</key>
 		<false/>
+		<key>useWindowOpen</key>
+		<true/>
 		<key>customURLSchemes</key>
 		<array>
 			<string>itunes.apple.com</string>
@@ -52,17 +54,18 @@
 		</array>
 		<key>externalLinks</key>
 		<array>
-			<string></string>
+			<string>facebook.com</string>
+			<string>m.facebook.com</string>
+			<string>www.facebook.com</string>
+			<string>twitter.com</string>
+			<string>www.youtube.com</string>
+			<string>youtube.com</string>
 		</array>
 	</dict>
 	<key>toolbar</key>
 	<dict>
 		<key>isEnabled</key>
 		<true/>
-		<key>backgroundColor</key>
-		<string></string>
-		<key>buttonColor</key>
-		<string></string>
 		<key>customButtons</key>
 		<array>
 			<dict>
@@ -78,15 +81,9 @@
 		<key>isEnabled</key>
 		<true/>
 		<key>isStatusBarLight</key>
-		<false/>
-		<key>backgroundColor</key>
-		<string></string>
-		<key>titleColor</key>
-		<string></string>
+		<true/>
 		<key>enableProgress</key>
 		<true/>
-		<key>progressColor</key>
-		<string></string>
 		<key>rightButton</key>
 		<dict>
 			<key>title</key>
@@ -107,7 +104,7 @@
 	<key>adMob</key>
 	<dict>
 		<key>isEnabled</key>
-		<false/>
+		<true/>
 		<key>appId</key>
 		<string></string>
 		<key>bannerUnitID</key>
@@ -138,7 +135,7 @@
 		<key>permissionOnLaunch</key>
 		<true/>
 		<key>willRequestAlways</key>
-		<false/>
+		<true/>
 	</dict>
 	<key>activityIndicator</key>
 	<dict>
@@ -152,15 +149,11 @@
 		<string></string>
 		<key>type</key>
 		<integer>3</integer>
-		<key>backgroundColor</key>
-		<string>000000</string>
-		<key>progressColor</key>
-		<string>FFFFFF</string>
 	</dict>
 	<key>inAppPurchase</key>
 	<dict>
 		<key>isEnabled</key>
-		<false/>
+		<true/>
 		<key>productId</key>
 		<string></string>
 	</dict>
@@ -169,40 +162,25 @@
 		<key>isEnabled</key>
 		<true/>
 		<key>facebookID</key>
-		<string>1240248316125265</string>
+		<string></string>
+		<key>interstitialPlacementID</key>
+		<string></string>
+		<key>bannerPlacementID</key>
+		<string></string>
 	</dict>
 	<key>sideMenu</key>
 	<dict>
 		<key>isEnabled</key>
 		<false/>
-		<key>backgroundColor</key>
-		<string>f8f8f8</string>
-		<key>buttonColor</key>
-		<string>000000</string>
 		<key>items</key>
 		<array>
 			<dict>
 				<key>title</key>
-				<string>Home</string>
+				<string></string>
 				<key>url</key>
-				<string>home.html</string>
-			</dict>
-			<dict>
-				<key>title</key>
-				<string>Privacy</string>
-				<key>url</key>
-				<string>privacy.html</string>
+				<string></string>
 			</dict>
 		</array>
-	</dict>
-	<key>freshchat</key>
-	<dict>
-		<key>isEnabled</key>
-		<true/>
-		<key>appId</key>
-		<string>8677d4c0-02e9-4a13-b652-692654218835 </string>
-		<key>appKey</key>
-		<string>484f2c47-2a92-47df-a066-096129583dcc </string>
 	</dict>
 </dict>
 </plist>

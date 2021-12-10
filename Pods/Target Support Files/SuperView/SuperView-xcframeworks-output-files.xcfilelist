@@ -1,0 +1,3 @@
+${PODS_XCFRAMEWORKS_BUILD_DIR}/SuperView/Core/SuperViewCore.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/SuperView/OneSignal/SuperViewOneSignal.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/SuperView/OneSignal/OneSignal.framework
