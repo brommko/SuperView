@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/SuperView/SuperView-xcframeworks.sh
+${PODS_ROOT}/SuperView/Frameworks/SuperViewCore.xcframework
+${PODS_ROOT}/SuperView/Frameworks/SuperViewOneSignal.xcframework
+${PODS_ROOT}/SuperView/Frameworks/OneSignal.xcframework

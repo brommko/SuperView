@@ -40,12 +40,12 @@ This is an iOS project that allows you to wrap your website in a super simple iO
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate SuperView into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
-pod "SuperView/Core"
-pod "SuperView/OneSignal"
-pod "SuperView/AdMob"
-pod "SuperView/Firebase"
-pod "SuperView/QR"
-pod "SuperView/Location"
+pod "SuperView/Core", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.3.0'
+pod "SuperView/OneSignal", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.3.0'
+pod "SuperView/AdMob", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.3.0'
+pod "SuperView/Firebase", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.3.0'
+pod "SuperView/QR", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.3.0'
+pod "SuperView/Location", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.3.0'
 ```
 Use SHIFT + CMD + K if you have an error with building.
 
