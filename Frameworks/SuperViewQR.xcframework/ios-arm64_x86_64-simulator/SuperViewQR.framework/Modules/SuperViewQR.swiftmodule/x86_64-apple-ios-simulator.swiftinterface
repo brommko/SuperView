@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SuperViewQR
 import AVFoundation
 import Foundation
@@ -7,48 +7,49 @@ import SuperViewCore
 @_exported import SuperViewQR
 import Swift
 import UIKit
+import _Concurrency
 public struct QRGeneratorAppearance : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-@objc @_inheritsConvenienceInitializers open class QRGeneratorViewController : UIKit.UIViewController {
-  public var showCloseButton: Swift.Bool
-  public var appearance: SuperViewQR.QRGeneratorAppearance
-  convenience public init(string: Swift.String)
-  @objc override dynamic open func viewDidLoad()
-  @objc override dynamic open var prefersStatusBarHidden: Swift.Bool {
-    @objc get
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class QRGeneratorViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public var showCloseButton: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var appearance: SuperViewQR.QRGeneratorAppearance
+  @_Concurrency.MainActor(unsafe) convenience public init(string: Swift.String)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var prefersStatusBarHidden: Swift.Bool {
+    @_Concurrency.MainActor(unsafe) @objc get
   }
-  @objc override dynamic open var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
-    @objc get
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
+    @_Concurrency.MainActor(unsafe) @objc get
   }
   @objc deinit
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
 }
-extension SuperView : SuperViewCore.SelfScanQrAware {
+extension SuperViewCore.SuperView : SuperViewCore.SelfScanQrAware {
   @objc public static func awake()
 }
-extension SuperView {
+extension SuperViewCore.SuperView {
   @objc @available(iOS 13, *)
   public static func configureQR()
 }
-@objc @_inheritsConvenienceInitializers open class QRScannerViewController : UIKit.UIViewController, AVFoundation.AVCaptureMetadataOutputObjectsDelegate {
-  public var showCloseButton: Swift.Bool
-  open var found: ((Swift.String?) -> Swift.Void)?
-  open var failed: ((Swift.String?) -> Swift.Void)?
-  open var data: Swift.String!
-  @objc override dynamic open func viewDidLoad()
-  @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
-  @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
-  @objc public func metadataOutput(_ output: AVFoundation.AVCaptureMetadataOutput, didOutput metadataObjects: [AVFoundation.AVMetadataObject], from connection: AVFoundation.AVCaptureConnection)
-  @objc override dynamic open var prefersStatusBarHidden: Swift.Bool {
-    @objc get
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class QRScannerViewController : UIKit.UIViewController, AVFoundation.AVCaptureMetadataOutputObjectsDelegate {
+  @_Concurrency.MainActor(unsafe) public var showCloseButton: Swift.Bool
+  @_Concurrency.MainActor(unsafe) open var found: ((Swift.String?) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) open var failed: ((Swift.String?) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) open var data: Swift.String!
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc public func metadataOutput(_ output: AVFoundation.AVCaptureMetadataOutput, didOutput metadataObjects: [AVFoundation.AVMetadataObject], from connection: AVFoundation.AVCaptureConnection)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var prefersStatusBarHidden: Swift.Bool {
+    @_Concurrency.MainActor(unsafe) @objc get
   }
-  @objc override dynamic open var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
-    @objc get
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
+    @_Concurrency.MainActor(unsafe) @objc get
   }
   @objc deinit
-  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
 }

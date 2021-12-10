@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SuperViewFirebase-Swift.h</key>
 		<data>
-		dZtZd7cmHpptEdkpVFYIVlvRMP4=
+		lk4huLB61rpiB79oCud3J83RlCM=
 		</data>
 		<key>Headers/SuperViewFirebase.h</key>
 		<data>
@@ -14,55 +14,55 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Wy+dfDH0tmc2AejJ+EIM0U3Dazk=
+		fPZ1Eacgt0mECNI4aQakLZlNu5k=
 		</data>
 		<key>Modules/SuperViewFirebase.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		k+e2+vGWj40nyESnLgc5lypf4Cw=
+		Qc0TdiWnRkpW7E3EEv6lggg2tkY=
 		</data>
 		<key>Modules/SuperViewFirebase.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		qCSsXKwanU5VYqMC+oy63c7lHX4=
+		4xVlEhSWlYiheazTAakEE9e5hlU=
 		</data>
 		<key>Modules/SuperViewFirebase.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		g+mEtFvg0PvOKfxFhVbRgk9rPO8=
+		YWwT7HaOYaP3Lvzn0HMSX80uSsQ=
 		</data>
 		<key>Modules/SuperViewFirebase.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		k+e2+vGWj40nyESnLgc5lypf4Cw=
+		Qc0TdiWnRkpW7E3EEv6lggg2tkY=
 		</data>
 		<key>Modules/SuperViewFirebase.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		qCSsXKwanU5VYqMC+oy63c7lHX4=
+		4xVlEhSWlYiheazTAakEE9e5hlU=
 		</data>
 		<key>Modules/SuperViewFirebase.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		g+mEtFvg0PvOKfxFhVbRgk9rPO8=
+		YWwT7HaOYaP3Lvzn0HMSX80uSsQ=
 		</data>
 		<key>Modules/SuperViewFirebase.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		FFmBpTuxj/tzvErZPJBVZ4b3EQk=
+		ncOn9+kHDNyuo2Q/6lWrFJVGvRw=
 		</data>
 		<key>Modules/SuperViewFirebase.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		xbNhfqgNS6/70DHKXo2IUZi5Gug=
+		FCPogs4MNMFVZ6a4k7hEWaMnn44=
 		</data>
 		<key>Modules/SuperViewFirebase.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		uYEcnRBEcubNDYiQVnjlRBbiBk8=
+		OqFKyHC61AgeVNSU/ZhgUyzCuss=
 		</data>
 		<key>Modules/SuperViewFirebase.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		FFmBpTuxj/tzvErZPJBVZ4b3EQk=
+		ncOn9+kHDNyuo2Q/6lWrFJVGvRw=
 		</data>
 		<key>Modules/SuperViewFirebase.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		xbNhfqgNS6/70DHKXo2IUZi5Gug=
+		FCPogs4MNMFVZ6a4k7hEWaMnn44=
 		</data>
 		<key>Modules/SuperViewFirebase.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		uYEcnRBEcubNDYiQVnjlRBbiBk8=
+		OqFKyHC61AgeVNSU/ZhgUyzCuss=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -75,7 +75,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4WKSkcFVT5MtWHyUuQ90TadCZMNIyC2+f//52Xywfbs=
+			fGMX6svEShQCtJjNhABNXp6Z7vlEU50kTvz8uE3VO5A=
 			</data>
 		</dict>
 		<key>Headers/SuperViewFirebase.h</key>
@@ -89,84 +89,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			m8cwKr/6xUyhkTuztIELzPOl6YwrNUSa4pX6GrJH1sk=
+			PTu9DWXQ0PULgPEYMWJ4QhR8eJX3OA9ZIRXvhuJGLUI=
 			</data>
 		</dict>
 		<key>Modules/SuperViewFirebase.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NqLndfRIrM4FA6CraVG6RuWHYWiQxa0L+KUPwRh9h80=
+			lBZaIUQGnK9xIg36nPKwSmif86289rhBh8ZbcVPxxuo=
 			</data>
 		</dict>
 		<key>Modules/SuperViewFirebase.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XClgbGqr5wtZqHpUDXt+KcsOCmLfNcwy5LrWDV+QCag=
+			NdhDD/zhH7ey9Y5b/JIjb2ANxeRrGvAHRr/xjXxZgqk=
 			</data>
 		</dict>
 		<key>Modules/SuperViewFirebase.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			m8cwKr/6xUyhkTuztIELzPOl6YwrNUSa4pX6GrJH1sk=
+			PTu9DWXQ0PULgPEYMWJ4QhR8eJX3OA9ZIRXvhuJGLUI=
 			</data>
 		</dict>
 		<key>Modules/SuperViewFirebase.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NqLndfRIrM4FA6CraVG6RuWHYWiQxa0L+KUPwRh9h80=
+			lBZaIUQGnK9xIg36nPKwSmif86289rhBh8ZbcVPxxuo=
 			</data>
 		</dict>
 		<key>Modules/SuperViewFirebase.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XClgbGqr5wtZqHpUDXt+KcsOCmLfNcwy5LrWDV+QCag=
+			NdhDD/zhH7ey9Y5b/JIjb2ANxeRrGvAHRr/xjXxZgqk=
 			</data>
 		</dict>
 		<key>Modules/SuperViewFirebase.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aGF/68LmpziVDr61Z73qOyOXVRlqaCNAPzcqRJCjDTA=
+			eV1T7asnJSj22+aEc00C7AMdwkdvhVga0cd8xrXDBtg=
 			</data>
 		</dict>
 		<key>Modules/SuperViewFirebase.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KmxjBE9e22zKWCF/NzWjKeXppW02VC9gJNCGioKSSRk=
+			cHXRy3CQPR6DPR/16iXn7xMj6cSVkUl//ji3oi0LMnU=
 			</data>
 		</dict>
 		<key>Modules/SuperViewFirebase.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mPlAjkcCy7hItiTdlg270E2EK8UpWaxNuc0p9fHdv40=
+			pRDZir7R3RBdBV/YW6dp3dR5cxHNOZIlQZMYEawgByI=
 			</data>
 		</dict>
 		<key>Modules/SuperViewFirebase.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aGF/68LmpziVDr61Z73qOyOXVRlqaCNAPzcqRJCjDTA=
+			eV1T7asnJSj22+aEc00C7AMdwkdvhVga0cd8xrXDBtg=
 			</data>
 		</dict>
 		<key>Modules/SuperViewFirebase.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KmxjBE9e22zKWCF/NzWjKeXppW02VC9gJNCGioKSSRk=
+			cHXRy3CQPR6DPR/16iXn7xMj6cSVkUl//ji3oi0LMnU=
 			</data>
 		</dict>
 		<key>Modules/SuperViewFirebase.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mPlAjkcCy7hItiTdlg270E2EK8UpWaxNuc0p9fHdv40=
+			pRDZir7R3RBdBV/YW6dp3dR5cxHNOZIlQZMYEawgByI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
