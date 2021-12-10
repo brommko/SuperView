@@ -1,4 +1,0 @@
-${PODS_ROOT}/Target Support Files/Pods-App/Pods-App-frameworks.sh
-${PODS_XCFRAMEWORKS_BUILD_DIR}/SuperView/Core/SuperViewCore.framework/SuperViewCore
-${PODS_XCFRAMEWORKS_BUILD_DIR}/SuperView/OneSignal/SuperViewOneSignal.framework/SuperViewOneSignal
-${PODS_XCFRAMEWORKS_BUILD_DIR}/SuperView/OneSignal/OneSignal.framework/OneSignal
