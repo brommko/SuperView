@@ -1,0 +1,136 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SuperViewCardScan
+import AVFoundation
+import AVKit
+import CoreML
+import Foundation
+import SuperViewCore
+import Swift
+import UIKit
+import VideoToolbox
+import Vision
+import _Concurrency
+public class Ocr {
+  public var scanStats: SuperViewCardScan.ScanStats
+  public var expiry: SuperViewCardScan.Expiry?
+  public var errorCorrectionDuration: Swift.Double
+  public init()
+  public func userCancelled()
+  @available(iOS 11.0, *)
+  public func performWithErrorCorrection(for rawImage: CoreGraphics.CGImage) -> (Swift.String?, SuperViewCardScan.Expiry?, Swift.Bool)
+  @available(iOS 11.0, *)
+  public func perform(for rawImage: CoreGraphics.CGImage) -> Swift.String?
+  @objc deinit
+}
+extension SuperViewCore.SuperView : SuperViewCore.SelfCardScanAware {
+  @objc public static func awake()
+}
+extension SuperViewCore.SuperView {
+  @objc @available(iOS 13, *)
+  public static func configureCardScan()
+}
+extension SuperViewCore.SuperWebView : SuperViewCardScan.ScanDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func userDidSkip(_ scanViewController: SuperViewCardScan.ScanViewController)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func userDidCancel(_ scanViewController: SuperViewCardScan.ScanViewController)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func userDidScanCard(_ scanViewController: SuperViewCardScan.ScanViewController, creditCard: SuperViewCardScan.CreditCard)
+}
+public struct ScanStats {
+  public var scans: Swift.Int
+  public var flatDigitsRecognized: Swift.Int
+  public var flatDigitsDetected: Swift.Int
+  public var embossedDigitsRecognized: Swift.Int
+  public var embossedDigitsDetected: Swift.Int
+  public var torchOn: Swift.Bool
+  public var success: Swift.Bool?
+  public var endTime: Foundation.Date?
+  public var model: Swift.String?
+  public var algorithm: Swift.String?
+  public var binImagePng: Swift.String?
+  public var bin: Swift.String?
+  public var last4ImagePng: Swift.String?
+  public var last4: Swift.String?
+  public var backgroundImageJpeg: Swift.String?
+  public var lastFlatBoxes: [CoreGraphics.CGRect]?
+  public var lastEmbossedBoxes: [CoreGraphics.CGRect]?
+  public var deviceType: Swift.String?
+  public var numberRect: CoreGraphics.CGRect?
+  public var expiryBoxes: [CoreGraphics.CGRect]?
+  public func toDictionaryForServer() -> [Swift.String : Any]
+  public func duration() -> Swift.Double
+  public func backgroundImage() -> UIKit.UIImage?
+  public func binImage() -> UIKit.UIImage?
+  public func last4Image() -> UIKit.UIImage?
+  public func imagesSize() -> Swift.Int
+}
+extension UIKit.UIImage {
+  public func pixelBuffer(width: Swift.Int, height: Swift.Int) -> CoreVideo.CVPixelBuffer?
+  public func pixelBufferGray(width: Swift.Int, height: Swift.Int) -> CoreVideo.CVPixelBuffer?
+  public func pixelBufferGray() -> CoreVideo.CVPixelBuffer?
+  public func areCornerPixelsBlack() -> Swift.Bool
+}
+extension UIKit.UIImage {
+  convenience public init?(pixelBuffer: CoreVideo.CVPixelBuffer)
+  convenience public init?(pixelBuffer: CoreVideo.CVPixelBuffer, context: CoreImage.CIContext)
+}
+extension UIKit.UIImage {
+  @nonobjc public class func fromByteArrayRGBA(_ bytes: [Swift.UInt8], width: Swift.Int, height: Swift.Int, scale: CoreGraphics.CGFloat = 0, orientation: UIKit.UIImage.Orientation = .up) -> UIKit.UIImage?
+  @nonobjc public class func fromByteArrayGray(_ bytes: [Swift.UInt8], width: Swift.Int, height: Swift.Int, scale: CoreGraphics.CGFloat = 0, orientation: UIKit.UIImage.Orientation = .up) -> UIKit.UIImage?
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class CornerView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public struct Expiry : Swift.Hashable {
+  public let string: Swift.String
+  public let month: Swift.UInt
+  public let year: Swift.UInt
+  public static func == (lhs: SuperViewCardScan.Expiry, rhs: SuperViewCardScan.Expiry) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol ScanDelegate {
+  @objc func userDidCancel(_ scanViewController: SuperViewCardScan.ScanViewController)
+  @objc func userDidScanCard(_ scanViewController: SuperViewCardScan.ScanViewController, creditCard: SuperViewCardScan.CreditCard)
+  @objc optional func userDidScanQrCode(_ scanViewController: SuperViewCardScan.ScanViewController, payload: Swift.String)
+  @objc func userDidSkip(_ scanViewController: SuperViewCardScan.ScanViewController)
+}
+@objc public class CreditCard : ObjectiveC.NSObject {
+  @objc public var number: Swift.String
+  @objc public var expiryMonth: Swift.String?
+  @objc public var expiryYear: Swift.String?
+  @objc public var name: Swift.String?
+  public init(number: Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class ScanViewController : UIKit.UIViewController, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
+  @_Concurrency.MainActor(unsafe) public var scanDelegate: SuperViewCardScan.ScanDelegate?
+  @_Concurrency.MainActor(unsafe) public var allowSkip: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var scanQrCode: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var errorCorrectionDuration: Swift.Double
+  @_Concurrency.MainActor(unsafe) public static let machineLearningQueue: Dispatch.DispatchQueue
+  @objc @_Concurrency.MainActor(unsafe) public static func createViewController(withDelegate delegate: SuperViewCardScan.ScanDelegate? = nil) -> SuperViewCardScan.ScanViewController?
+  @objc @_Concurrency.MainActor(unsafe) public static func configure()
+  @objc @_Concurrency.MainActor(unsafe) public static func isCompatible() -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public static func cameraImage() -> UIKit.UIImage?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var shouldAutorotate: Swift.Bool {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var supportedInterfaceOrientations: UIKit.UIInterfaceOrientationMask {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var preferredStatusBarStyle: UIKit.UIStatusBarStyle {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) public func getScanStats() -> SuperViewCardScan.ScanStats
+  @_Concurrency.MainActor(unsafe) @objc public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}

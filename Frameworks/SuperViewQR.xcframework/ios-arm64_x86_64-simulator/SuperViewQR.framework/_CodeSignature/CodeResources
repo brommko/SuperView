@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SuperViewQR-Swift.h</key>
 		<data>
-		Bua8dPeUyrb8eWzhRLtog88vOmA=
+		LPCJdyOcIWwnhYhRdT28U5LcurU=
 		</data>
 		<key>Headers/SuperViewQR.h</key>
 		<data>
@@ -14,55 +14,55 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		NVi+eLlRXrcnWirUkuzYHf/j5zA=
+		2Kgxifr0W0lrV/0Ux5vrKxhKWmI=
 		</data>
 		<key>Modules/SuperViewQR.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		NiNBoyDc7b+Diei3nKXUrIUi5ZI=
+		shS9rNHnkulLae03vJO6jTMnH3w=
 		</data>
 		<key>Modules/SuperViewQR.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		i/ftGOqJ9tY0BniiZNLUvdEqPRM=
+		lPbwa1+IdCCauwElt3qJQFMZGdo=
 		</data>
 		<key>Modules/SuperViewQR.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Zt6BDfs35b8+Vqm7E1xofFR2i48=
+		/Sbaxms8VWj2uIhxkUlL2Nc20Os=
 		</data>
 		<key>Modules/SuperViewQR.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		NiNBoyDc7b+Diei3nKXUrIUi5ZI=
+		shS9rNHnkulLae03vJO6jTMnH3w=
 		</data>
 		<key>Modules/SuperViewQR.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		i/ftGOqJ9tY0BniiZNLUvdEqPRM=
+		lPbwa1+IdCCauwElt3qJQFMZGdo=
 		</data>
 		<key>Modules/SuperViewQR.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		Zt6BDfs35b8+Vqm7E1xofFR2i48=
+		/Sbaxms8VWj2uIhxkUlL2Nc20Os=
 		</data>
 		<key>Modules/SuperViewQR.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		40XZHectysV5sL5ysn6Op/0ifmo=
+		e9PWubby26JEqmxz7VtANQTRsjc=
 		</data>
 		<key>Modules/SuperViewQR.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		DGRmDxMTPRYLtvnPe413LniQDxQ=
+		iT8Y2yEcik7mSIDPbFOSpnbM4FQ=
 		</data>
 		<key>Modules/SuperViewQR.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		OG93j72lG31KdxCRgpwNPlOMB3k=
+		328uXO8DXK9Mb8UKOSzU8tYVtu8=
 		</data>
 		<key>Modules/SuperViewQR.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		40XZHectysV5sL5ysn6Op/0ifmo=
+		e9PWubby26JEqmxz7VtANQTRsjc=
 		</data>
 		<key>Modules/SuperViewQR.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		DGRmDxMTPRYLtvnPe413LniQDxQ=
+		iT8Y2yEcik7mSIDPbFOSpnbM4FQ=
 		</data>
 		<key>Modules/SuperViewQR.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		OG93j72lG31KdxCRgpwNPlOMB3k=
+		328uXO8DXK9Mb8UKOSzU8tYVtu8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -75,7 +75,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DjwL+i4TPLJrj3eJ0S0VoL5Z5h/Oqv4+bfe1YTiNmtM=
+			eqVxKXIMZehQwTzf1jvd6Eb9E5UZLHMeK/KYC1Ipdyw=
 			</data>
 		</dict>
 		<key>Headers/SuperViewQR.h</key>
@@ -89,84 +89,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			b4U/al7Po66x3wV5bJXltI8pI1wA7XkdYykhFpmix2k=
+			ekNpwUlEjRYhWWhjCJhfGbrpvz0RN4DT5QGWvkYCdO4=
 			</data>
 		</dict>
 		<key>Modules/SuperViewQR.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JKhzag4ZH0Bg7kzhJD58hjrpgIGUJjLKGCreU3iz7PY=
+			s9IlTTfi4DuXUzRZr5flSz3v2vYwKa+XoB0iVoeAmvo=
 			</data>
 		</dict>
 		<key>Modules/SuperViewQR.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eWcY5ufDXO0qD58gAwYh0JfPlYPYMRYy9+uCBIeEs2U=
+			ppEIBIolaSsgHot2qfGH4GwKE40yEO7o0Fk5XXJR3uo=
 			</data>
 		</dict>
 		<key>Modules/SuperViewQR.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			b4U/al7Po66x3wV5bJXltI8pI1wA7XkdYykhFpmix2k=
+			ekNpwUlEjRYhWWhjCJhfGbrpvz0RN4DT5QGWvkYCdO4=
 			</data>
 		</dict>
 		<key>Modules/SuperViewQR.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JKhzag4ZH0Bg7kzhJD58hjrpgIGUJjLKGCreU3iz7PY=
+			s9IlTTfi4DuXUzRZr5flSz3v2vYwKa+XoB0iVoeAmvo=
 			</data>
 		</dict>
 		<key>Modules/SuperViewQR.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eWcY5ufDXO0qD58gAwYh0JfPlYPYMRYy9+uCBIeEs2U=
+			ppEIBIolaSsgHot2qfGH4GwKE40yEO7o0Fk5XXJR3uo=
 			</data>
 		</dict>
 		<key>Modules/SuperViewQR.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DjJ/L746uQt9H/vgzvMK1UAOCltI/XJz7Du4uFPS+Jo=
+			MQ3YMseIc0lDAThHG/qFy7l6y2/T22cZJqfhRaO4ggI=
 			</data>
 		</dict>
 		<key>Modules/SuperViewQR.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mnYm6Vk+n9jz3TSW9aWuXZwTtmV+Lb4HP15bkHHWKhI=
+			kPacQ3J0T4IKhB+s5Tr5d7ve6zdeMKcNyEiArMOVlC4=
 			</data>
 		</dict>
 		<key>Modules/SuperViewQR.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VXeXlUXD4u1qejSKVXQ2L4NsTkCpNUGUMr7pYU08IMo=
+			kVsbVa6/AbQq8/BKly255HDZzyle9Vp3LSO3rHOvFFo=
 			</data>
 		</dict>
 		<key>Modules/SuperViewQR.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DjJ/L746uQt9H/vgzvMK1UAOCltI/XJz7Du4uFPS+Jo=
+			MQ3YMseIc0lDAThHG/qFy7l6y2/T22cZJqfhRaO4ggI=
 			</data>
 		</dict>
 		<key>Modules/SuperViewQR.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mnYm6Vk+n9jz3TSW9aWuXZwTtmV+Lb4HP15bkHHWKhI=
+			kPacQ3J0T4IKhB+s5Tr5d7ve6zdeMKcNyEiArMOVlC4=
 			</data>
 		</dict>
 		<key>Modules/SuperViewQR.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VXeXlUXD4u1qejSKVXQ2L4NsTkCpNUGUMr7pYU08IMo=
+			kVsbVa6/AbQq8/BKly255HDZzyle9Vp3LSO3rHOvFFo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SuperViewLocation
 import CoreLocation
 import Foundation
@@ -7,9 +7,10 @@ import SuperViewCore
 @_exported import SuperViewLocation
 import Swift
 import UIKit
-extension SuperWebView : SuperViewLocation.LocationServiceDelegate {
-  @objc dynamic public func tracingLocation(_ currentLocation: CoreLocation.CLLocation)
-  @objc dynamic public func tracingLocationDidFailWithError(_ error: Foundation.NSError)
+import _Concurrency
+extension SuperViewCore.SuperWebView : SuperViewLocation.LocationServiceDelegate {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func tracingLocation(_ currentLocation: CoreLocation.CLLocation)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func tracingLocationDidFailWithError(_ error: Foundation.NSError)
 }
 public protocol LocationServiceDelegate : AnyObject {
   func tracingLocation(_ currentLocation: CoreLocation.CLLocation)
@@ -20,10 +21,10 @@ public protocol LocationServiceDelegate : AnyObject {
   @objc public func locationManager(_ manager: CoreLocation.CLLocationManager, didFailWithError error: Swift.Error)
   @objc deinit
 }
-extension SuperView {
+extension SuperViewCore.SuperView {
   @objc @available(iOS 13, *)
   public static func configureLocation()
 }
-extension SuperView : SuperViewCore.SelfLocationAware {
+extension SuperViewCore.SuperView : SuperViewCore.SelfLocationAware {
   @objc public static func awake()
 }

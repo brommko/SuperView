@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SuperViewAdMob-Swift.h</key>
 		<data>
-		LPtCJp94uDRbIYk5un8rQhaJkes=
+		ge5MBkHsdtyss3flK/rj5axgI+4=
 		</data>
 		<key>Headers/SuperViewAdMob.h</key>
 		<data>
@@ -14,55 +14,55 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		8AegneEi1Fat37QjcFHgHTM7z6M=
+		F127IBvxwGKU24cK+DTcmU1F3TU=
 		</data>
 		<key>Modules/SuperViewAdMob.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		dxWbJ9yHrMP967ibTE5q2Y36aTo=
+		VUsxnxjsyFOGmzJzJNS9jzpulcQ=
 		</data>
 		<key>Modules/SuperViewAdMob.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		EPpI1D3aQGted3xwC9wpe3fHfKg=
+		dx7qsx9WXhY/taCMuv4Z/uegaUU=
 		</data>
 		<key>Modules/SuperViewAdMob.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Bl8UjCV9F30NpeM21yLbn51/Sco=
+		uKCBiaeOISrsSvlfxVv9GRqy8zg=
 		</data>
 		<key>Modules/SuperViewAdMob.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		dxWbJ9yHrMP967ibTE5q2Y36aTo=
+		VUsxnxjsyFOGmzJzJNS9jzpulcQ=
 		</data>
 		<key>Modules/SuperViewAdMob.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		EPpI1D3aQGted3xwC9wpe3fHfKg=
+		dx7qsx9WXhY/taCMuv4Z/uegaUU=
 		</data>
 		<key>Modules/SuperViewAdMob.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		Bl8UjCV9F30NpeM21yLbn51/Sco=
+		uKCBiaeOISrsSvlfxVv9GRqy8zg=
 		</data>
 		<key>Modules/SuperViewAdMob.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		ga54sYv/+j3jQDIOh7Nft3X5jxw=
+		DrWuwJBQkUkwZCoE8p+n4W18Eq4=
 		</data>
 		<key>Modules/SuperViewAdMob.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		cm7jAGJ3nbiuJbteEYQfz6jZ/L0=
+		Ua+BHdBwalE51jcTuWUK6H3ucYc=
 		</data>
 		<key>Modules/SuperViewAdMob.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		0Futzt7RysqiYdtt6aXQtkTGOpk=
+		3N/ENg8I4lXFpS3CXykr4a6PDxg=
 		</data>
 		<key>Modules/SuperViewAdMob.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		ga54sYv/+j3jQDIOh7Nft3X5jxw=
+		DrWuwJBQkUkwZCoE8p+n4W18Eq4=
 		</data>
 		<key>Modules/SuperViewAdMob.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		cm7jAGJ3nbiuJbteEYQfz6jZ/L0=
+		Ua+BHdBwalE51jcTuWUK6H3ucYc=
 		</data>
 		<key>Modules/SuperViewAdMob.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		0Futzt7RysqiYdtt6aXQtkTGOpk=
+		3N/ENg8I4lXFpS3CXykr4a6PDxg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -75,7 +75,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0yNwPneCbRg+q1a79WrS//NsC3nBpSY2OzdEiSNapmQ=
+			6QJWZWom8UwVpVpPB2PATsCLqMhkMLOIXgC+nMp2Q/c=
 			</data>
 		</dict>
 		<key>Headers/SuperViewAdMob.h</key>
@@ -89,84 +89,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			i5RDB7PUGCcwuacKpNgoxWZRmQNk2oZzweWe2fzh2uQ=
+			jvV8l9K3zxAhf0PuvB1NzwD57wd3TdmJ8MEsBlJnIxg=
 			</data>
 		</dict>
 		<key>Modules/SuperViewAdMob.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EC8KSRW8o+qs0u6qLxD97jujJj87I7SnpXaUW+mQqEg=
+			GT0wruHQluHl/ytuVI34p0Ihz+BX3xHX6MtGLkgHt5I=
 			</data>
 		</dict>
 		<key>Modules/SuperViewAdMob.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KH+B75BFy+6qs0oBizyg4OVzuIPkd1OmuNs8pL/XIiI=
+			5Wd+WqM54WCmzw2Wu51ZanIy8JC8l5214/A3QNq2qgI=
 			</data>
 		</dict>
 		<key>Modules/SuperViewAdMob.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			i5RDB7PUGCcwuacKpNgoxWZRmQNk2oZzweWe2fzh2uQ=
+			jvV8l9K3zxAhf0PuvB1NzwD57wd3TdmJ8MEsBlJnIxg=
 			</data>
 		</dict>
 		<key>Modules/SuperViewAdMob.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EC8KSRW8o+qs0u6qLxD97jujJj87I7SnpXaUW+mQqEg=
+			GT0wruHQluHl/ytuVI34p0Ihz+BX3xHX6MtGLkgHt5I=
 			</data>
 		</dict>
 		<key>Modules/SuperViewAdMob.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KH+B75BFy+6qs0oBizyg4OVzuIPkd1OmuNs8pL/XIiI=
+			5Wd+WqM54WCmzw2Wu51ZanIy8JC8l5214/A3QNq2qgI=
 			</data>
 		</dict>
 		<key>Modules/SuperViewAdMob.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Yaj12oAubL8M2Oo3dJZfigzh5bm7aCluzJZUiIsFP+E=
+			xWqIZrbkmfbDtO5gDxLTTMmapzNe3ndrTskBAtlymUY=
 			</data>
 		</dict>
 		<key>Modules/SuperViewAdMob.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UCTqIoLCzNfKqRsDJVqe6RAJJtDiD3gzi5kLpA656M4=
+			M1WNNOi48n+5cVUmmcFy4YoKiCDzIZkWX2EKrgtcNAo=
 			</data>
 		</dict>
 		<key>Modules/SuperViewAdMob.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lVnrkn4AU5XPaJEh0sssU5zFlTJtOgcvy8nwoM/8fV0=
+			nmIeyUo0mApIBlXg6wFu4g7dk/ORxEC+S+NLZjdfTxE=
 			</data>
 		</dict>
 		<key>Modules/SuperViewAdMob.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Yaj12oAubL8M2Oo3dJZfigzh5bm7aCluzJZUiIsFP+E=
+			xWqIZrbkmfbDtO5gDxLTTMmapzNe3ndrTskBAtlymUY=
 			</data>
 		</dict>
 		<key>Modules/SuperViewAdMob.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UCTqIoLCzNfKqRsDJVqe6RAJJtDiD3gzi5kLpA656M4=
+			M1WNNOi48n+5cVUmmcFy4YoKiCDzIZkWX2EKrgtcNAo=
 			</data>
 		</dict>
 		<key>Modules/SuperViewAdMob.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lVnrkn4AU5XPaJEh0sssU5zFlTJtOgcvy8nwoM/8fV0=
+			nmIeyUo0mApIBlXg6wFu4g7dk/ORxEC+S+NLZjdfTxE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

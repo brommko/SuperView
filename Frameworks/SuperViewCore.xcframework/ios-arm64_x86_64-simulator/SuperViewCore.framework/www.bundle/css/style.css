@@ -1,1 +1,51 @@
 /* YOUR CUSTOM STYLES */
+main {
+    margin-top: 3rem;
+}
+main .card {
+    margin-bottom: 2rem;
+}
+@media only screen and (max-width: 768px) {
+    .read-more {
+        text-align: center;
+    }
+}
+p { word-break: break-all }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #eee;
+    background: #121212;
+  }
+ 
+  a {
+    color: #eee;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+      color: #eee;
+  }
+  
+  .card-block {
+      background: #121212;
+  }
+}
+ 
+@media (prefers-color-scheme: light) {
+    body {
+      color: #eee;
+      background: #ffffff;
+    }
+   
+    a {
+      color: #809fff;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: #809fff;
+    }
+    
+    .card-block {
+        background: #ffffff;
+    }
+}

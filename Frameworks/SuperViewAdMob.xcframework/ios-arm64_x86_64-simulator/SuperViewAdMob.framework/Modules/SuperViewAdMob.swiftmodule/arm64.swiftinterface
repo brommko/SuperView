@@ -1,23 +1,24 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SuperViewAdMob
 import Foundation
 import GoogleMobileAds
 @_exported import SuperViewAdMob
 import SuperViewCore
 import Swift
-extension SuperView : SuperViewCore.SelfAdMobAware {
+import _Concurrency
+extension SuperViewCore.SuperView : SuperViewCore.SelfAdMobAware {
   @objc public static func awake()
 }
-extension SuperView {
+extension SuperViewCore.SuperView {
   @objc @available(iOS 13, *)
   public static func configureAdMob()
 }
-extension SuperWebViewController : GoogleMobileAds.GADBannerViewDelegate {
-  @objc dynamic public func bannerViewDidReceiveAd(_ bannerView: GoogleMobileAds.GADBannerView)
+extension SuperViewCore.SuperWebViewController : GoogleMobileAds.GADBannerViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func bannerViewDidReceiveAd(_ bannerView: GoogleMobileAds.GADBannerView)
 }
-extension SuperWebViewController : GoogleMobileAds.GADFullScreenContentDelegate {
-  @objc dynamic public func ad(_ ad: GoogleMobileAds.GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Swift.Error)
-  @objc dynamic public func adDidPresentFullScreenContent(_ ad: GoogleMobileAds.GADFullScreenPresentingAd)
-  @objc dynamic public func adDidDismissFullScreenContent(_ ad: GoogleMobileAds.GADFullScreenPresentingAd)
+extension SuperViewCore.SuperWebViewController : GoogleMobileAds.GADFullScreenContentDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func ad(_ ad: GoogleMobileAds.GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Swift.Error)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func adDidPresentFullScreenContent(_ ad: GoogleMobileAds.GADFullScreenPresentingAd)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func adDidDismissFullScreenContent(_ ad: GoogleMobileAds.GADFullScreenPresentingAd)
 }

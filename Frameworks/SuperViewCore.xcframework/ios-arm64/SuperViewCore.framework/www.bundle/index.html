@@ -13,21 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/mdb.min.css" rel="stylesheet">
-
-    <style rel="stylesheet">
-        main {
-            margin-top: 3rem;
-        }
-        main .card {
-            margin-bottom: 2rem;
-        }
-        @media only screen and (max-width: 768px) {
-            .read-more {
-                text-align: center;
-            }
-        }
-        p { word-break: break-all }
-    </style>
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- SCRIPTS -->
     <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
@@ -38,20 +24,8 @@
 
     <script type="text/javascript">
 
-    function makeVideoCall() {
-        window.bridge.post('make_video_call', {"accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1mcGE7dj0xIn0.eyJqdGkiOiJTSzgyMDYzNjg2NTIxZTk5MzVhZTY5MDNiYWUxNzc3YmExLTE1NTIzODAzNzYiLCJpc3MiOiJTSzgyMDYzNjg2NTIxZTk5MzVhZTY5MDNiYWUxNzc3YmExIiwic3ViIjoiQUNhYjQ0Y2Y4MThmMGI3OWZlYmVmMjBjMzM0YzEwYzMzMSIsImV4cCI6MTU1MjM4Mzk3NiwiZ3JhbnRzIjp7ImlkZW50aXR5IjoidGVzdDIiLCJ2aWRlbyI6eyJyb29tIjoidGVzdCJ9fX0.iwN72O9k9yENKMNblMnN8RNF2XyCELgCD34GBPVkkU0"})
-    }
-
     function setBrightness() {
         window.bridge.post('set_brightness', {"brightness": Math.random()})
-    }
-
-    function scanCardIO() {
-        window.bridge.post('scan_card_io', {})
-
-        var unregisterHandler = window.bridge.on('scan_card_io_details', (parameters)=> {
-            $('#card_io_details').html("number: " + parameters.number + " <br /> expiry: " + parameters.expiry + " <br /> cvv: " + parameters.cvv)
-        })    
     }
 
     function scanCardScan() {
@@ -211,51 +185,6 @@
              $('#qr_details').html("data: " + parameters.data);
          })
     }
-
-    function showFreshchatFAQ() {
-        window.bridge.post('show_freshchat_faq');
-    }
-
-    function showFreshchatConversations() {
-        window.bridge.post('show_freshchat_conversations');
-    }
-
-    function getFreshchatUserID() {
-        window.bridge.post('get_freshchat_user_id');
-        var unregisterHandler = window.bridge.on('show_freshchat_user_id', (parameters)=> {
-             $('#freshchat_user_id').html("data: " + parameters.userID);
-         })
-    }
-
-    function getFreshchatUserIDToken() {
-        window.bridge.post('get_freshchat_user_id_token');
-        var unregisterHandler = window.bridge.on('show_freshchat_user_id_token', (parameters)=> {
-             $('#freshchat_user_id_token').html("data: " + parameters.userIDToken);
-         })
-    }
-
-    function setFreshchatUser() {
-        window.bridge.post('set_freshchat_user', {
-            email: 'john@doe.com',
-            firstName: 'John',
-            lastName: 'Doe' // those are the only 4 properties you can track
-        })
-    }
-
-    function setFreshchatRestoreUser() {
-        window.bridge.post('set_freshchat_restore_user', {"externalID": "1", "restoreID": "2"})
-    }
-
-    function sendFreshchatMessage() {
-        window.bridge.post('send_freshchat_message', {"channel": "1", "message": "some message"})
-    }
-
-    function getFreshchatRestoreUser() {
-        window.bridge.post('get_freshchat_restore_user', {"externalID": "1", "restoreID": "2"}, (parameters)=> {
-            $('#freshchat_restore_id').html("data: " + parameters.restoreID);
-        })
-    }
-    
     </script>
 
 </head>
@@ -717,34 +646,10 @@
                 <div class="col-md-16">
                     <div class="card">
                         <div class="card-block">
-                            <h4 class="card-title">Card IO</h4>
-                            <p id="card_io_details"></p>
-                            <div class="read-more">
-                                <a id="get_cardio_scan" class="btn btn-primary" onClick="scanCardIO()">Scan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-16">
-                    <div class="card">
-                        <div class="card-block">
                             <h4 class="card-title">Card Scan</h4>
                             <p id="card_details"></p>
                             <div class="read-more">
                                 <a id="get_cardio_scan" class="btn btn-primary" onClick="scanCardScan()">Scan</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-16">
-                    <div class="card">
-                        <div class="card-block">
-                            <h4 class="card-title">Twilio</h4>
-                            <p id="card_details"></p>
-                            <div class="read-more">
-                                <a id="get_card_scan" class="btn btn-primary" onClick="makeVideoCall()">Make Video Call</a>
                             </div>
                         </div>
                     </div>
@@ -769,97 +674,6 @@
                             <p id="qr_details"></p>
                             <div class="read-more">
                                 <a class="btn btn-primary" onClick="generateQR()">Generate</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-16">
-                    <div class="card">
-                        <div class="card-block">
-                            <h4 class="card-title">Show Freshchat FAQ</h4>
-                            <div class="read-more">
-                                <a id="show_freshchat_faq" class="btn btn-primary" onClick="showFreshchatFAQ()" >Show FAQ</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-16">
-                    <div class="card">
-                        <div class="card-block">
-                            <h4 class="card-title">Show Freshchat Conversations</h4>
-                            <div class="read-more">
-                                <a id="show_freshchat_conversations" class="btn btn-primary" onClick="showFreshchatConversations()" >Show Conversations</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-16">
-                    <div class="card">
-                        <div class="card-block">
-                            <h4 class="card-title">Set Freshchat User</h4>
-                            <div class="read-more">
-                                <a id="set_freshchat_user" class="btn btn-primary" onClick="setFreshchatUser()" >Set</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-16">
-                    <div class="card">
-                        <div class="card-block">
-                            <h4 class="card-title">Get Freshchat User ID</h4>
-                            <p id="freshchat_user_id"></p>
-                            <div class="read-more">
-                                <a id="get_cardio_scan" class="btn btn-primary" onClick="getFreshchatUserID()">Get</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-16">
-                    <div class="card">
-                        <div class="card-block">
-                            <h4 class="card-title">Get Freshchat User ID Token</h4>
-                            <p id="freshchat_user_id_token"></p>
-                            <div class="read-more">
-                                <a id="get_cardio_scan" class="btn btn-primary" onClick="getFreshchatUserIDToken()">Get</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-16">
-                    <div class="card">
-                        <div class="card-block">
-                            <h4 class="card-title">Set Freshchat User Restore ID</h4>
-                            <div class="read-more">
-                                <a id="set_freshchat_restore_id" class="btn btn-primary" onClick="setFreshchatRestoreUser()">Get</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-16">
-                    <div class="card">
-                        <div class="card-block">
-                            <h4 class="card-title">Get Freshchat User Restore ID</h4>
-                            <p id="freshchat_restore_id"></p>
-                            <div class="read-more">
-                                <a id="get_freshchat_restore_id" class="btn btn-primary" onClick="getFreshchatRestoreUser()">Get</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-16">
-                    <div class="card">
-                        <div class="card-block">
-                            <h4 class="card-title">Send Freshchat Message</h4>
-                            <div class="read-more">
-                                <a id="send_freshchat_message_id" class="btn btn-primary" onClick="sendFreshchatMessage()">Send</a>
                             </div>
                         </div>
                     </div>
