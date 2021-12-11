@@ -1,15 +1,13 @@
 //
 //  AppDelegate.swift
-//  SuperViewExample
+//  App
 //
 //  Created by Brommko LLC on 09/10/2018.
 //
 
 import UIKit
-
-#if canImport(SuperViewCore)
+import Foundation
 import SuperViewCore
-#endif
 
 #if canImport(SuperViewAdMob)
 import SuperViewAdMob
@@ -47,6 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         SuperView.configure(application: application, launchOptions: launchOptions)
+        SuperView.configureCustomBridge()
         
         #if canImport(SuperViewAdMob)
         SuperView.configureAdMob()
