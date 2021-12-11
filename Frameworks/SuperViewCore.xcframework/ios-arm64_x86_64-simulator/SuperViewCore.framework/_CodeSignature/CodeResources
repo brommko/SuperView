@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		VpygxT9/HbKZCvFmRwEFysFDudI=
+		pPLr+r+oAEy706LbDvK6nfuHkXo=
 		</data>
 		<key>Headers/SuperViewCore-Swift.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/SuperViewCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		zq+0kd9CoCxPjHx+S0U4Vf4nHak=
+		zBrVtF5svYcZ5C8c6tkwi2zgB4k=
 		</data>
 		<key>Modules/SuperViewCore.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/SuperViewCore.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		zq+0kd9CoCxPjHx+S0U4Vf4nHak=
+		zBrVtF5svYcZ5C8c6tkwi2zgB4k=
 		</data>
 		<key>Modules/SuperViewCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/SuperViewCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		+tYXO84HVxPrrUv7M9ZnXWRoOwc=
+		Ndrfy46M/qUbf5YH5Sm30es7dMU=
 		</data>
 		<key>Modules/SuperViewCore.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Modules/SuperViewCore.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		+tYXO84HVxPrrUv7M9ZnXWRoOwc=
+		Ndrfy46M/qUbf5YH5Sm30es7dMU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -263,7 +263,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5xJdPvbHwBUXXlHz5ybiVThG+TwBIOvb5sjtZG7Hz8s=
+			PE5Y/O1E3rRbBXgjEbs9H+8TJrSuQMA75EoZHP7jZz0=
 			</data>
 		</dict>
 		<key>Headers/SuperViewCore-Swift.h</key>
@@ -298,7 +298,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cfwp5VlLxENuBaNKHUZAAJd5Sk5zHPtjlrzgyLnZwP8=
+			ls7E2kjEQV0OVlxuHM+qSQBsMpqoRFhF45gJZsJmBMI=
 			</data>
 		</dict>
 		<key>Modules/SuperViewCore.swiftmodule/arm64.swiftdoc</key>
@@ -319,7 +319,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cfwp5VlLxENuBaNKHUZAAJd5Sk5zHPtjlrzgyLnZwP8=
+			ls7E2kjEQV0OVlxuHM+qSQBsMpqoRFhF45gJZsJmBMI=
 			</data>
 		</dict>
 		<key>Modules/SuperViewCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -340,7 +340,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sOML9eOjKqYaRSjRCJygqqjJjMog32oNXslqBtqfebQ=
+			9HZWmpjaJkwp08h3f015iVHXmfI1QtWJHVdXTxU+dvo=
 			</data>
 		</dict>
 		<key>Modules/SuperViewCore.swiftmodule/x86_64.swiftdoc</key>
@@ -361,7 +361,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sOML9eOjKqYaRSjRCJygqqjJjMog32oNXslqBtqfebQ=
+			9HZWmpjaJkwp08h3f015iVHXmfI1QtWJHVdXTxU+dvo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
