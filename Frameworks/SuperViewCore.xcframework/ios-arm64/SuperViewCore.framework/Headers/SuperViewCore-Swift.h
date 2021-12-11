@@ -403,6 +403,8 @@ SWIFT_CLASS("_TtC13SuperViewCore12SuperWebView")
 - (void)setupQRBridge;
 /// Don’t try to swizzle this method!
 - (void)setupFirebaseBridge;
+/// Don’t try to swizzle this method!
+- (void)setupCustomBridge;
 @end
 
 

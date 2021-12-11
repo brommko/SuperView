@@ -124,6 +124,7 @@ extension SuperViewCore.SuperWebView {
   @objc @_Concurrency.MainActor(unsafe) dynamic open func setupFacebookBridge()
   @objc @_Concurrency.MainActor(unsafe) dynamic open func setupQRBridge()
   @objc @_Concurrency.MainActor(unsafe) dynamic open func setupFirebaseBridge()
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func setupCustomBridge()
 }
 extension SuperViewCore.SuperWebView : WebKit.WKUIDelegate {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
