@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		pPLr+r+oAEy706LbDvK6nfuHkXo=
+		Of5JRNvGrpNRyZAsmbzcOaYALiQ=
 		</data>
 		<key>Headers/SuperViewCore-Swift.h</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/SuperViewCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		zBrVtF5svYcZ5C8c6tkwi2zgB4k=
+		AhWAeWFuVgWKrH2BlWVdA0S7xPc=
 		</data>
 		<key>Modules/SuperViewCore.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/SuperViewCore.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		zBrVtF5svYcZ5C8c6tkwi2zgB4k=
+		AhWAeWFuVgWKrH2BlWVdA0S7xPc=
 		</data>
 		<key>Modules/SuperViewCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/SuperViewCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Ndrfy46M/qUbf5YH5Sm30es7dMU=
+		+Q4aBIoiW0O0uiEHocnldliJhJw=
 		</data>
 		<key>Modules/SuperViewCore.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Modules/SuperViewCore.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		Ndrfy46M/qUbf5YH5Sm30es7dMU=
+		+Q4aBIoiW0O0uiEHocnldliJhJw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -218,7 +218,7 @@
 		</data>
 		<key>www.bundle/index.html</key>
 		<data>
-		6m6BVTZIR63tVa5b6H8nHiUxoQQ=
+		7vLbV7WfOs4BlAMKxq4XXFw9iAQ=
 		</data>
 		<key>www.bundle/js/bootstrap.js</key>
 		<data>
@@ -263,7 +263,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PE5Y/O1E3rRbBXgjEbs9H+8TJrSuQMA75EoZHP7jZz0=
+			HZ+5jL2bHmFgkhmQa5DFXWRo9YkYVvFkh4lf0GDVo8Y=
 			</data>
 		</dict>
 		<key>Headers/SuperViewCore-Swift.h</key>
@@ -298,7 +298,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ls7E2kjEQV0OVlxuHM+qSQBsMpqoRFhF45gJZsJmBMI=
+			71RH+NYTaEIj3SUqltQETvyhOO+vguLA+lknuZGohMY=
 			</data>
 		</dict>
 		<key>Modules/SuperViewCore.swiftmodule/arm64.swiftdoc</key>
@@ -319,7 +319,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ls7E2kjEQV0OVlxuHM+qSQBsMpqoRFhF45gJZsJmBMI=
+			71RH+NYTaEIj3SUqltQETvyhOO+vguLA+lknuZGohMY=
 			</data>
 		</dict>
 		<key>Modules/SuperViewCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -340,7 +340,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9HZWmpjaJkwp08h3f015iVHXmfI1QtWJHVdXTxU+dvo=
+			hawIp6CZV8zQbpsx8/0ewxibpG0XRkiugNvZMwpv7MA=
 			</data>
 		</dict>
 		<key>Modules/SuperViewCore.swiftmodule/x86_64.swiftdoc</key>
@@ -361,7 +361,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9HZWmpjaJkwp08h3f015iVHXmfI1QtWJHVdXTxU+dvo=
+			hawIp6CZV8zQbpsx8/0ewxibpG0XRkiugNvZMwpv7MA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -627,7 +627,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2DR9Qkva0JfL0/oiyuO+zD8v39I6+gouMII0T0Y15eI=
+			mO2fgZ/I4eae8Yx1sreMgMCguyPWw64nbZ4SU3RXsDo=
 			</data>
 		</dict>
 		<key>www.bundle/js/bootstrap.js</key>

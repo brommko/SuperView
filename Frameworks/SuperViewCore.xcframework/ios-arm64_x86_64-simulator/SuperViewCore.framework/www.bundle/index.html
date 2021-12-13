@@ -59,6 +59,12 @@
            $('#get_app_version').html(results.version)
         })
     }
+        
+    function getDeviceID() {
+        window.bridge.post('deviceid', {}, (results, error) => {
+            $('#device_id').html(results.id)
+        })
+    }
 
     function makePurchase() {
         window.bridge.post('make_purchase', {})
@@ -338,6 +344,18 @@
                             <p id="get_app_version"></p>
                             <div class="read-more">
                                 <a class="btn btn-primary" onClick="getAppVersion()">Get app version</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-16">
+                    <div class="card">
+                        <div class="card-block">
+                            <h4 class="card-title">Device Id</h4>
+                            <p id="device_id"></p>
+                            <div class="read-more">
+                                <a class="btn btn-primary" onClick="getDeviceID()">Get Device id</a>
                             </div>
                         </div>
                     </div>
