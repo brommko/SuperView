@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SuperViewCore
 import AVFoundation
 import Foundation
@@ -101,10 +101,11 @@ public struct WebViewOptions : Swift.Codable {
   public var useBottomSafeArea: Swift.Bool
   public var openAllExternalLinks: Swift.Bool
   public var useWindowOpen: Swift.Bool
+  public var useNetworkCheck: Swift.Bool
   public var externalLinks: [Swift.String]
   public var customURLSchemes: [Swift.String]
   public var mediaTypesRequiringUserActionForPlayback: Swift.Int
-  public init(url: Swift.String? = nil, isRTL: Swift.Bool? = false, customUserAgent: Swift.String? = nil, userScript: Swift.String? = nil, allowPullToRefresh: Swift.Bool? = true, allowBounce: Swift.Bool? = true, allowVideoPlayInline: Swift.Bool? = true, allowLinkPreview: Swift.Bool? = true, allowBackForwardSwipe: Swift.Bool? = true, allowCache: Swift.Bool? = true, allowZoom: Swift.Bool? = true, allowPictureInPicture: Swift.Bool? = true, waitUntilLoaded: Swift.Bool? = true, useTopSafeArea: Swift.Bool? = false, useBottomSafeArea: Swift.Bool? = false, openAllExternalLinks: Swift.Bool? = false, externalLinks: [Swift.String]? = [], useWindowOpen: Swift.Bool = true, customURLSchemes: [Swift.String]? = [], mediaTypesRequiringUserActionForPlayback: Swift.Int? = 3)
+  public init(url: Swift.String? = nil, isRTL: Swift.Bool? = false, customUserAgent: Swift.String? = nil, userScript: Swift.String? = nil, allowPullToRefresh: Swift.Bool? = true, allowBounce: Swift.Bool? = true, allowVideoPlayInline: Swift.Bool? = true, allowLinkPreview: Swift.Bool? = true, allowBackForwardSwipe: Swift.Bool? = true, allowCache: Swift.Bool? = true, allowZoom: Swift.Bool? = true, allowPictureInPicture: Swift.Bool? = true, waitUntilLoaded: Swift.Bool? = true, useTopSafeArea: Swift.Bool? = false, useBottomSafeArea: Swift.Bool? = false, openAllExternalLinks: Swift.Bool? = false, externalLinks: [Swift.String]? = [], useWindowOpen: Swift.Bool = true, useNoInternetConnection: Swift.Bool = false, customURLSchemes: [Swift.String]? = [], mediaTypesRequiringUserActionForPlayback: Swift.Int? = 3)
   public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
 }
