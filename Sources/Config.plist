@@ -42,6 +42,8 @@
 		<false/>
 		<key>useWindowOpen</key>
 		<true/>
+		<key>useNetworkCheck</key>
+		<true/>
 		<key>customURLSchemes</key>
 		<array>
 			<string>itunes.apple.com</string>
