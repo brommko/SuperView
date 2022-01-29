@@ -5,6 +5,6 @@ install! 'cocoapods', :deterministic_uuids => false
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'App' do
-  pod "SuperView/Core", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.3.2'
-  pod "SuperView/OneSignal", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.3.2'
+  pod "SuperView/Core", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.3.3'
+  pod "SuperView/OneSignal", :git => 'https://github.com/brommko/SuperView.git', :tag => '1.3.3'
 end
