@@ -1,11 +1,12 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SuperViewCore
 import AVFoundation
 import Foundation
 import Network
 import PDFKit
 import QuartzCore
+import QuickLook
 import SafariServices
 import StoreKit
 @_exported import SuperViewCore
@@ -102,10 +103,11 @@ public struct WebViewOptions : Swift.Codable {
   public var openAllExternalLinks: Swift.Bool
   public var useWindowOpen: Swift.Bool
   public var useNetworkCheck: Swift.Bool
+  public var openInDocumentPreview: Swift.String?
   public var externalLinks: [Swift.String]
   public var customURLSchemes: [Swift.String]
   public var mediaTypesRequiringUserActionForPlayback: Swift.Int
-  public init(url: Swift.String? = nil, isRTL: Swift.Bool? = false, customUserAgent: Swift.String? = nil, userScript: Swift.String? = nil, allowPullToRefresh: Swift.Bool? = true, allowBounce: Swift.Bool? = true, allowVideoPlayInline: Swift.Bool? = true, allowLinkPreview: Swift.Bool? = true, allowBackForwardSwipe: Swift.Bool? = true, allowCache: Swift.Bool? = true, allowZoom: Swift.Bool? = true, allowPictureInPicture: Swift.Bool? = true, waitUntilLoaded: Swift.Bool? = true, useTopSafeArea: Swift.Bool? = false, useBottomSafeArea: Swift.Bool? = false, openAllExternalLinks: Swift.Bool? = false, externalLinks: [Swift.String]? = [], useWindowOpen: Swift.Bool = true, useNoInternetConnection: Swift.Bool = false, customURLSchemes: [Swift.String]? = [], mediaTypesRequiringUserActionForPlayback: Swift.Int? = 3)
+  public init(url: Swift.String? = nil, isRTL: Swift.Bool? = false, customUserAgent: Swift.String? = nil, userScript: Swift.String? = nil, allowPullToRefresh: Swift.Bool? = true, allowBounce: Swift.Bool? = true, allowVideoPlayInline: Swift.Bool? = true, allowLinkPreview: Swift.Bool? = true, allowBackForwardSwipe: Swift.Bool? = true, allowCache: Swift.Bool? = true, allowZoom: Swift.Bool? = true, allowPictureInPicture: Swift.Bool? = true, waitUntilLoaded: Swift.Bool? = true, useTopSafeArea: Swift.Bool? = false, useBottomSafeArea: Swift.Bool? = false, openAllExternalLinks: Swift.Bool? = false, externalLinks: [Swift.String]? = [], useWindowOpen: Swift.Bool = true, useNoInternetConnection: Swift.Bool = false, customURLSchemes: [Swift.String]? = [], mediaTypesRequiringUserActionForPlayback: Swift.Int? = 3, openInDocumentPreview: Swift.String? = nil)
   public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
 }
@@ -199,6 +201,10 @@ extension SuperViewCore.SuperWebViewController : WebKit.WKNavigationDelegate {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
   @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: Swift.Error)
   @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation!, withError error: Swift.Error)
+}
+extension SuperViewCore.SuperWebViewController : QuickLook.QLPreviewControllerDataSource {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func numberOfPreviewItems(in controller: QuickLook.QLPreviewController) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func previewController(_ controller: QuickLook.QLPreviewController, previewItemAt index: Swift.Int) -> QuickLook.QLPreviewItem
 }
 extension SuperViewCore.SuperWebViewController : SuperViewCore.SuperToolbarDelegate {
   @_Concurrency.MainActor(unsafe) public func superToolbar(_ event: SuperViewCore.SuperToolbarEvent)
