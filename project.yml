@@ -1,47 +1,112 @@
 name: App
+options:
+  bundleIdPrefix: com.bommko
+  deploymentTarget:
+    iOS: "15.6"
+  xcodeVersion: "16.0"
+  generateEmptyDirectories: true
+
 settingGroups:
   commonBuildSettings:
-    SWIFT_VERSION: 5
+    SWIFT_VERSION: "5.9"
     CURRENT_PROJECT_VERSION: 1
     MARKETING_VERSION: 1.0.0
-    IPHONEOS_DEPLOYMENT_TARGET: 15.6
+    IPHONEOS_DEPLOYMENT_TARGET: "15.6"
     SWIFT_OPTIMIZATION_LEVEL: -Onone
-    TARGETED_DEVICE_FAMILY: '1'
+    TARGETED_DEVICE_FAMILY: "1,2"
     ENABLE_BITCODE: NO
     BUILD_LIBRARIES_FOR_DISTRIBUTION: YES
     CODE_SIGN_IDENTITY: "iPhone Developer"
     DEBUG_INFORMATION_FORMAT: dwarf-with-dsym
     DEVELOPMENT_TEAM: 56XX2LQCB2
+    SWIFT_EMIT_LOC_STRINGS: YES
+    CLANG_ENABLE_MODULES: YES
+
+packages:
+  OneSignal:
+    url: https://github.com/OneSignal/OneSignal-XCFramework
+    from: "5.2.0"
+  GoogleMobileAds:
+    url: https://github.com/googleads/swift-package-manager-google-mobile-ads
+    from: "11.0.0"
+  Firebase:
+    url: https://github.com/firebase/firebase-ios-sdk
+    from: "11.0.0"
+
 targets:
   App:
     type: application
     platform: iOS
-    deploymentTarget: 15.6
+    deploymentTarget: "15.6"
     sources:
       - path: Sources
+        excludes:
+          - "AppDelegate.swift"
+          - "SuperWebView+JSBridge.swift"
+          - "Base.lproj/LaunchScreen.storyboard"
+      - path: Frameworks
+        buildPhase: none
     settings:
       base:
         INFOPLIST_FILE: Sources/Info.plist
         PRODUCT_BUNDLE_IDENTIFIER: com.bommko.UniversalWebView
         CODE_SIGN_ENTITLEMENTS: Sources/App.entitlements
         CFBundleDisplayName: SuperView
+        FRAMEWORK_SEARCH_PATHS:
+          - "$(PROJECT_DIR)/Frameworks"
+        LD_RUNPATH_SEARCH_PATHS:
+          - "@executable_path/Frameworks"
       groups:
         - commonBuildSettings
     dependencies:
       - target: NotificationService
-        embed:
-          embedAndSign: true
+        embed: true
+        codeSign: true
+      - framework: Frameworks/SuperViewCore.xcframework
+        embed: true
+      - framework: Frameworks/SuperViewOneSignal.xcframework
+        embed: true
+      - framework: Frameworks/SuperViewAdMob.xcframework
+        embed: true
+      - framework: Frameworks/SuperViewFirebase.xcframework
+        embed: true
+      - framework: Frameworks/SuperViewLocation.xcframework
+        embed: true
+      - framework: Frameworks/SuperViewQR.xcframework
+        embed: true
+      - framework: Frameworks/SuperViewCardScan.xcframework
+        embed: true
+      - package: OneSignal
+        product: OneSignalFramework
+      - package: GoogleMobileAds
+        product: GoogleMobileAds
+      - package: Firebase
+        product: FirebaseAnalytics
+      - package: Firebase
+        product: FirebaseMessaging
+
   NotificationService:
     platform: iOS
     type: app-extension
+    deploymentTarget: "15.6"
     sources:
       - NotificationService
     settings:
       base:
+        INFOPLIST_FILE: NotificationService/Info.plist
         PRODUCT_BUNDLE_IDENTIFIER: com.bommko.UniversalWebView.NotificationService
         CODE_SIGN_ENTITLEMENTS: NotificationService/NotificationService.entitlements
+        FRAMEWORK_SEARCH_PATHS:
+          - "$(PROJECT_DIR)/Frameworks"
+        LD_RUNPATH_SEARCH_PATHS:
+          - "@executable_path/Frameworks"
+          - "@executable_path/../../Frameworks"
       groups:
         - commonBuildSettings
+    dependencies:
+      - package: OneSignal
+        product: OneSignalExtension
+
 schemes:
   App:
     build:
@@ -49,7 +114,7 @@ schemes:
         App: all
         NotificationService: none
     run:
-      configuration: Debug
+      config: Debug
     test:
       targets:
         - App
@@ -58,4 +123,4 @@ schemes:
       targets:
         NotificationService: all
     run:
-      configuration: Debug
+      config: Debug

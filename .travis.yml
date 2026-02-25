@@ -1,10 +1,9 @@
 language: swift
-osx_image: xcode12
+osx_image: xcode15.4
 before_install:
-  - gem install cocoapods # Since Travis is not always on latest version
-  - pod repo update
-  - pod install
+  - brew install xcodegen
 script:
-  - xcodebuild -scheme App -workspace App.xcworkspace -sdk iphonesimulator build
+  - xcodegen
+  - xcodebuild -scheme App -project App.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 15' build
 after_success:
   - bash <(curl -s https://codecov.io/bash)
