@@ -34,7 +34,26 @@ This is an iOS project that allows you to wrap your website in a super simple iO
 * **JS Bridge** – create local notification, rate my app, hide native loader, show native loader, check if user purchased the item and removed the ads, get OneSignal Player ID, make in-app purchase to remove ads
 
 ## Installation
-### CocoaPods
+### Swift Package Manager
+
+In Xcode: **File → Add Package Dependencies…** and enter
+`https://github.com/mariokovacevic/SuperView`. Add the products for the
+modules your app uses (`SuperViewCore` plus any of `SuperViewOneSignal`,
+`SuperViewAdMob`, `SuperViewLocation`, `SuperViewQR`). For push
+notifications, also add the `OneSignalExtension` product from the
+transitively resolved OneSignal package to your Notification Service
+Extension target.
+
+Or in a `Package.swift` / XcodeGen `project.yml`:
+
+```yaml
+packages:
+  SuperView:
+    url: https://github.com/mariokovacevic/SuperView
+    branch: spm   # switch to a version once 1.5.0 is tagged
+```
+
+### CocoaPods (deprecated)
 
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate SuperView into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
